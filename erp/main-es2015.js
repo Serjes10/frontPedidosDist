@@ -3466,6 +3466,11 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
+        redirectTo: 'inicio',
+        pathMatch: 'full',
+    },
+    {
+        path: '',
         component: _layout_full_component__WEBPACK_IMPORTED_MODULE_2__["FullComponent"],
         children: [
             {
@@ -3493,11 +3498,6 @@ const routes = [
     {
         path: 'inicio',
         component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
-    },
-    {
-        path: '',
-        redirectTo: 'inicio',
-        pathMatch: 'full',
     },
 ];
 class AppRoutingModule {

@@ -6573,6 +6573,10 @@
 
       var routes = [{
         path: '',
+        redirectTo: 'inicio',
+        pathMatch: 'full'
+      }, {
+        path: '',
         component: _layout_full_component__WEBPACK_IMPORTED_MODULE_2__["FullComponent"],
         children: [{
           path: 'dashboard',
@@ -6625,10 +6629,6 @@
       }, {
         path: 'inicio',
         component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]
-      }, {
-        path: '',
-        redirectTo: 'inicio',
-        pathMatch: 'full'
       }];
 
       var AppRoutingModule = function AppRoutingModule() {
