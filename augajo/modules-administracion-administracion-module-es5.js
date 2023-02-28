@@ -4016,6 +4016,8 @@
             this.Cargando$.next(true);
             this.TipoPedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/tipoPedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
+              console.log(result);
+
               _this29.Cargando$.next(false);
 
               _this29.TipoPedidos$.next(result.data.Table0);
@@ -6717,17 +6719,21 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "button", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "mat-card-actions");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "Cancelar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 58);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "button", 59);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, "Cancelar");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "button", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "button", 56);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_Template_button_click_63_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_Template_button_click_64_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r23);
 
             var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -6735,7 +6741,7 @@
             return ctx_r24.Guardar();
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, "Guardar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "Guardar");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6809,13 +6815,10 @@
         }, {
           key: "openDialog",
           value: function openDialog(template, params) {
-            var dialogRef = this.dialog.open(template, {
-              panelClass: "app-full-bleed-dialog",
-              disableClose: true
-            });
             this.formPedido = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
               //Valores de front para insertar tipo de pedido
               Id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.Id) || "0"),
+              IdPedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.Id) || "0"),
               IdTipoPedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.IdTipoPedido) || "0"),
               IdMetodoPago: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.IdMetodoPago) || "0"),
               IdReparto: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.IdReparto) || null),
@@ -6824,7 +6827,11 @@
               Observacion: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.Observacion) || ""),
               usuario: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]("ymunoz"),
               idEstado: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.IdEstado) || 1),
-              url: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](params.Url)
+              url: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.Url) || null)
+            });
+            var dialogRef = this.dialog.open(template, {
+              panelClass: "app-full-bleed-dialog",
+              disableClose: true
             });
           }
         }, {
@@ -7016,7 +7023,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 65, 17, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 66, 17, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
           }
 
           if (rf & 2) {
@@ -7041,7 +7048,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](29, 11, ctx.pedidosFacade.responseCargando$) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](30, 13, ctx.pedidosFacade.responsePedidos$).length > 0);
           }
         },
-        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkWithHref"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatPrefix"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _shared_loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_14__["MatPaginator"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogContent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_select__WEBPACK_IMPORTED_MODULE_15__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatHint"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_16__["CdkTextareaAutosize"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogClose"], _angular_material_core__WEBPACK_IMPORTED_MODULE_17__["MatOption"]],
+        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkWithHref"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatPrefix"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _shared_loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_14__["MatPaginator"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogContent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_select__WEBPACK_IMPORTED_MODULE_15__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatHint"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_16__["CdkTextareaAutosize"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardActions"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogClose"], _angular_material_core__WEBPACK_IMPORTED_MODULE_17__["MatOption"]],
         pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["SlicePipe"], _core_pipe_search_pipe__WEBPACK_IMPORTED_MODULE_18__["SearchPipe"], _core_pipe_truncate_pipe_pipe__WEBPACK_IMPORTED_MODULE_19__["TruncatePipePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["DatePipe"]],
         styles: [".imagePedido[_ngcontent-%COMP%] {\r\n    width: 30vw;\r\n    height: 30vh;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBlZGlkb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0FBQ2hCIiwiZmlsZSI6InBlZGlkb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZVBlZGlkbyB7XHJcbiAgICB3aWR0aDogMzB2dztcclxuICAgIGhlaWdodDogMzB2aDtcclxufSJdfQ== */"]
       });
