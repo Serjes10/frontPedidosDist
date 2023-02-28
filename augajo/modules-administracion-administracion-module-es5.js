@@ -4120,6 +4120,40 @@
             }));
             return request$.subscribe();
           }
+        }, {
+          key: "InsertarArchivoAdjunto",
+          value: function InsertarArchivoAdjunto(params, respuesta) {
+            var _this34 = this;
+
+            this.Cargando$.next(true);
+            var request$ = this.dataApi.PostDataApi("mantenimiento/adjunto/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
+              respuesta(result);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
+              _this34.Cargando$.next(false);
+
+              _this34._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el adjunto', '');
+
+              return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
+            }));
+            return request$.subscribe();
+          }
+        }, {
+          key: "cargarArchivo",
+          value: function cargarArchivo(params, respuesta) {
+            var _this35 = this;
+
+            this.Cargando$.next(true);
+            var request$ = this.dataApi.PostDataApi("adjuntos/cargarArchivos/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
+              respuesta(result);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
+              _this35.Cargando$.next(false);
+
+              _this35._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al cargar el archivo', '');
+
+              return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
+            }));
+            return request$.subscribe();
+          }
         }]);
 
         return PedidosFacadeService;
@@ -4624,7 +4658,7 @@
         }, {
           key: "Guardar",
           value: function Guardar() {
-            var _this34 = this;
+            var _this36 = this;
 
             if (this.formTipoContacto.invalid) {
               this.toast.mensajeWarning('Es requerido ingresar los campos marcados como obligatorios', '');
@@ -4635,17 +4669,17 @@
             if (this.formTipoContacto.get('id').value === 0) {
               this.tipoContactoFacade.InsertarTipoContacto(this.formTipoContacto.value, function (respuesta) {
                 if (respuesta.hasError === false) {
-                  _this34.tipoContactoFacade.MostrarTipoContacto('0');
+                  _this36.tipoContactoFacade.MostrarTipoContacto('0');
 
-                  _this34.dialog.closeAll();
+                  _this36.dialog.closeAll();
                 }
               });
             } else {
               this.tipoContactoFacade.ActualizarTipoContacto(this.formTipoContacto.value, function (respuesta) {
                 if (respuesta.hasError === false) {
-                  _this34.tipoContactoFacade.MostrarTipoContacto('0');
+                  _this36.tipoContactoFacade.MostrarTipoContacto('0');
 
-                  _this34.dialog.closeAll();
+                  _this36.dialog.closeAll();
                 }
               });
             }
@@ -4653,7 +4687,7 @@
         }, {
           key: "Eliminar",
           value: function Eliminar(params) {
-            var _this35 = this;
+            var _this37 = this;
 
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
               title: "Confirmación",
@@ -4666,8 +4700,8 @@
               cancelButtonText: "Cancelar"
             }).then(function (result) {
               if (result.isConfirmed) {
-                _this35.tipoContactoFacade.EliminarTipoContacto(params.Id, function (respuesta) {
-                  _this35.tipoContactoFacade.MostrarTipoContacto("0");
+                _this37.tipoContactoFacade.EliminarTipoContacto(params.Id, function (respuesta) {
+                  _this37.tipoContactoFacade.MostrarTipoContacto("0");
                 });
               }
             });
@@ -5006,6 +5040,12 @@
       var _tipo_contacto_tipo_contacto_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ./tipo-contacto/tipo-contacto.component */
       "i8HB");
+      /* harmony import */
+
+
+      var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+      /*! @angular/material/slide-toggle */
+      "1jcm");
 
       var AdministracionModule = function AdministracionModule() {
         _classCallCheck(this, AdministracionModule);
@@ -5018,13 +5058,13 @@
         factory: function AdministracionModule_Factory(t) {
           return new (t || AdministracionModule)();
         },
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"]]]
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__["MatSlideToggleModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdministracionModule, {
           declarations: [_tipo_pedido_tipo_pedido_component__WEBPACK_IMPORTED_MODULE_3__["TipoPedidoComponent"], _metodo_pago_metodo_pago_component__WEBPACK_IMPORTED_MODULE_14__["MetodoPagoComponent"], _reparto_reparto_component__WEBPACK_IMPORTED_MODULE_15__["RepartoComponent"], _pedidos_pedidos_component__WEBPACK_IMPORTED_MODULE_16__["PedidosComponent"], _tipo_identificacion_tipo_identificacion_component__WEBPACK_IMPORTED_MODULE_18__["TipoIdentificacionComponent"], _genero_genero_component__WEBPACK_IMPORTED_MODULE_19__["GeneroComponent"], _tipo_contacto_tipo_contacto_component__WEBPACK_IMPORTED_MODULE_20__["TipoContactoComponent"]],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"]]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__["MatSlideToggleModule"]]
         });
       })();
       /*@__PURE__*/
@@ -5035,7 +5075,7 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
             declarations: [_tipo_pedido_tipo_pedido_component__WEBPACK_IMPORTED_MODULE_3__["TipoPedidoComponent"], _metodo_pago_metodo_pago_component__WEBPACK_IMPORTED_MODULE_14__["MetodoPagoComponent"], _reparto_reparto_component__WEBPACK_IMPORTED_MODULE_15__["RepartoComponent"], _pedidos_pedidos_component__WEBPACK_IMPORTED_MODULE_16__["PedidosComponent"], _tipo_identificacion_tipo_identificacion_component__WEBPACK_IMPORTED_MODULE_18__["TipoIdentificacionComponent"], _genero_genero_component__WEBPACK_IMPORTED_MODULE_19__["GeneroComponent"], _tipo_contacto_tipo_contacto_component__WEBPACK_IMPORTED_MODULE_20__["TipoContactoComponent"]],
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"]]
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _administracion_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdministracionRoutingModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], src_app_core_pipe_pipe_module__WEBPACK_IMPORTED_MODULE_10__["PipeModule"], src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_13__["MatPaginatorModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__["MatSlideToggleModule"]]
           }]
         }], null, null);
       })();
@@ -5560,7 +5600,7 @@
         }, {
           key: "Guardar",
           value: function Guardar() {
-            var _this36 = this;
+            var _this38 = this;
 
             if (this.formTipoPedido.invalid) {
               this.toast.mensajeWarning("Es requerido ingresar los campos validos", "");
@@ -5571,22 +5611,22 @@
 
             if (this.formTipoPedido.get("id").value === "0") {
               this.tipoPedidoFacade.InsertarTipoPedidos(this.formTipoPedido.value, function (respuesta) {
-                _this36.tipoPedidoFacade.MostrarTipoPedidos("0");
+                _this38.tipoPedidoFacade.MostrarTipoPedidos("0");
 
-                _this36.dialog.closeAll();
+                _this38.dialog.closeAll();
               });
             } else {
               this.tipoPedidoFacade.ActualizarTipoPedidos(this.formTipoPedido.value, function (respuesta) {
-                _this36.tipoPedidoFacade.MostrarTipoPedidos("0");
+                _this38.tipoPedidoFacade.MostrarTipoPedidos("0");
 
-                _this36.dialog.closeAll();
+                _this38.dialog.closeAll();
               });
             }
           }
         }, {
           key: "Eliminar",
           value: function Eliminar(params) {
-            var _this37 = this;
+            var _this39 = this;
 
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
               title: "Confirmación",
@@ -5599,8 +5639,8 @@
               cancelButtonText: "Cancelar"
             }).then(function (result) {
               if (result.isConfirmed) {
-                _this37.tipoPedidoFacade.EliminarTipoPedidos(params.Id, function (respuesta) {
-                  _this37.tipoPedidoFacade.MostrarTipoPedidos("0");
+                _this39.tipoPedidoFacade.EliminarTipoPedidos(params.Id, function (respuesta) {
+                  _this39.tipoPedidoFacade.MostrarTipoPedidos("0");
                 });
               }
             });
@@ -5862,20 +5902,20 @@
         _createClass(MetodoPagoFacadeService, [{
           key: "MostrarMetodoPago",
           value: function MostrarMetodoPago(params) {
-            var _this38 = this;
+            var _this40 = this;
 
             this.Cargando$.next(true);
             this.MetodoPago$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/metodoPago/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this38.Cargando$.next(false);
+              _this40.Cargando$.next(false);
 
-              _this38.MetodoPago$.next(result.data.Table0);
+              _this40.MetodoPago$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this38.Cargando$.next(false);
+              _this40.Cargando$.next(false);
 
-              _this38.MetodoPago$.next([]);
+              _this40.MetodoPago$.next([]);
 
-              _this38._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar el metodo de pago', '');
+              _this40._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar el metodo de pago', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -5884,18 +5924,18 @@
         }, {
           key: "InsertarMetodoPago",
           value: function InsertarMetodoPago(params, respuesta) {
-            var _this39 = this;
+            var _this41 = this;
 
             this.Cargando$.next(true);
             this.MetodoPago$.next([]);
             var request$ = this.dataApi.PostDataApi("mantenimiento/metodoPago/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this39.Cargando$.next(false);
+              _this41.Cargando$.next(false);
 
-              _this39.MetodoPago$.next([]);
+              _this41.MetodoPago$.next([]);
 
-              _this39._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el metodo de pago', '');
+              _this41._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el metodo de pago', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -5904,18 +5944,18 @@
         }, {
           key: "ActualizarMetodoPago",
           value: function ActualizarMetodoPago(params, respuesta) {
-            var _this40 = this;
+            var _this42 = this;
 
             this.Cargando$.next(true);
             this.MetodoPago$.next([]);
             var request$ = this.dataApi.PutDataApi("mantenimiento/metodoPago/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this40.Cargando$.next(false);
+              _this42.Cargando$.next(false);
 
-              _this40.MetodoPago$.next([]);
+              _this42.MetodoPago$.next([]);
 
-              _this40._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el metodo de pago', '');
+              _this42._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el metodo de pago', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -5924,18 +5964,18 @@
         }, {
           key: "EliminarMetodoPago",
           value: function EliminarMetodoPago(params, respuesta) {
-            var _this41 = this;
+            var _this43 = this;
 
             this.Cargando$.next(true);
             this.MetodoPago$.next([]);
             var request$ = this.dataApi.DeleteDataApiUrl("mantenimiento/metodoPago/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this41.Cargando$.next(false);
+              _this43.Cargando$.next(false);
 
-              _this41.MetodoPago$.next([]);
+              _this43.MetodoPago$.next([]);
 
-              _this41._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al eliminar el metodo de pago', '');
+              _this43._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al eliminar el metodo de pago', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -6109,13 +6149,19 @@
       /* harmony import */
 
 
-      var _core_pipe_search_pipe__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      /*! @angular/material/slide-toggle */
+      "1jcm");
+      /* harmony import */
+
+
+      var _core_pipe_search_pipe__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
       /*! ../../../core/pipe/search.pipe */
       "8hG2");
       /* harmony import */
 
 
-      var _core_pipe_truncate_pipe_pipe__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+      var _core_pipe_truncate_pipe_pipe__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ../../../core/pipe/truncate-pipe.pipe */
       "0fZQ");
 
@@ -6409,7 +6455,7 @@
 
       function PedidosComponent_ng_template_31_mat_option_9_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6417,19 +6463,19 @@
         }
 
         if (rf & 2) {
-          var tipoPedido_r19 = ctx.$implicit;
+          var tipoPedido_r21 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", tipoPedido_r19.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", tipoPedido_r21.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tipoPedido_r19.TipoPedido);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tipoPedido_r21.TipoPedido);
         }
       }
 
       function PedidosComponent_ng_template_31_mat_option_17_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6437,19 +6483,19 @@
         }
 
         if (rf & 2) {
-          var metodoPago_r20 = ctx.$implicit;
+          var metodoPago_r22 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", metodoPago_r20.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", metodoPago_r22.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](metodoPago_r20.MetodoPago);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](metodoPago_r22.MetodoPago);
         }
       }
 
       function PedidosComponent_ng_template_31_mat_option_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6457,19 +6503,19 @@
         }
 
         if (rf & 2) {
-          var reparto_r21 = ctx.$implicit;
+          var reparto_r23 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reparto_r21.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reparto_r23.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](reparto_r21.NombreReparto);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](reparto_r23.NombreReparto);
         }
       }
 
       function PedidosComponent_ng_template_31_mat_option_33_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6477,19 +6523,19 @@
         }
 
         if (rf & 2) {
-          var usuario_r22 = ctx.$implicit;
+          var usuario_r24 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", usuario_r22.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", usuario_r24.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](usuario_r22.Usuario);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](usuario_r24.Usuario);
         }
       }
 
       function PedidosComponent_ng_template_31_mat_option_41_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6497,30 +6543,124 @@
         }
 
         if (rf & 2) {
-          var estado_r23 = ctx.$implicit;
+          var estado_r25 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", estado_r23.id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", estado_r25.id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](estado_r23.EstadoProceso);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](estado_r25.EstadoProceso);
+        }
+      }
+
+      function PedidosComponent_ng_template_31_div_54_div_3_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 67);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 68);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_div_54_div_3_Template_div_click_1_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r29);
+
+            var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
+
+            return _r27.click();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 69);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "input", 70, 71);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function PedidosComponent_ng_template_31_div_54_div_3_Template_input_change_4_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r29);
+
+            var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+
+            return ctx_r30.onFileSelect($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r26.nombreArchivo || "Seleccionar archivo", " ");
         }
       }
 
       function PedidosComponent_ng_template_31_div_54_Template(rf, ctx) {
         if (rf & 1) {
-          var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 57);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-slide-toggle", 65);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "\xBFPago realizado?");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, PedidosComponent_ng_template_31_div_54_div_3_Template, 6, 1, "div", 66);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx_r16.pagoRealizado);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r16.pagoRealizado.value);
+        }
+      }
+
+      function PedidosComponent_ng_template_31_div_56_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 72);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r17.cardImageBase64, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        }
+      }
+
+      function PedidosComponent_ng_template_31_div_57_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 73);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_div_54_Template_button_click_1_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_div_57_Template_button_click_1_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r32);
 
-            var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+            var ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r24.descargarImagen();
+            return ctx_r31.descargarImagen();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-icon");
@@ -6537,36 +6677,36 @@
         }
       }
 
-      function PedidosComponent_ng_template_31_div_55_Template(rf, ctx) {
+      function PedidosComponent_ng_template_31_div_58_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 63);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 74);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 64);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 72);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r17.formPedido.get("url").value, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r19.formPedido.get("url").value, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
         }
       }
 
-      function PedidosComponent_ng_template_31_button_59_Template(rf, ctx) {
+      function PedidosComponent_ng_template_31_button_62_Template(rf, ctx) {
         if (rf & 1) {
-          var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 73);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_button_59_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_button_62_Template_button_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r34);
 
-            var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+            var ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r26.Guardar();
+            return ctx_r33.enviarPedido();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Guardar");
@@ -6737,25 +6877,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](54, PedidosComponent_ng_template_31_div_54_Template, 5, 0, "div", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](54, PedidosComponent_ng_template_31_div_54_Template, 4, 2, "div", 56);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](55, PedidosComponent_ng_template_31_div_55_Template, 2, 1, "div", 57);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 57);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, PedidosComponent_ng_template_31_div_56_Template, 2, 1, "div", 58);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](57, PedidosComponent_ng_template_31_div_57_Template, 5, 0, "div", 59);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](58, PedidosComponent_ng_template_31_div_58_Template, 2, 1, "div", 60);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 61);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "button", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "button", 62);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Cancelar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "Cancelar");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](59, PedidosComponent_ng_template_31_button_59_Template, 2, 0, "button", 60);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](62, PedidosComponent_ng_template_31_button_62_Template, 2, 0, "button", 63);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](60, "async");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](63, "async");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6771,25 +6919,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 9, ctx_r4.pedidosFacade.responseTipoPedidos$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 11, ctx_r4.pedidosFacade.responseTipoPedidos$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](18, 11, ctx_r4.pedidosFacade.responseMetodosPago$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](18, 13, ctx_r4.pedidosFacade.responseMetodosPago$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](26, 13, ctx_r4.pedidosFacade.responseReparto$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](26, 15, ctx_r4.pedidosFacade.responseReparto$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](34, 15, ctx_r4.pedidosFacade.responseUsuario$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](34, 17, ctx_r4.pedidosFacade.responseUsuario$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](42, 17, ctx_r4.pedidosFacade.responseEstadoProceso$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](42, 19, ctx_r4.pedidosFacade.responseEstadoProceso$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r4.formPedido.get("url").value == null);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r4.isImageSaved);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r4.formPedido.get("url").value != null);
 
@@ -6799,7 +6955,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](60, 19, ctx_r4.pedidosFacade.responseCargando$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](63, 21, ctx_r4.pedidosFacade.responseCargando$));
         }
       }
 
@@ -6821,6 +6977,11 @@
           this.pageIndex = 0;
           this.desde = 0;
           this.hasta = 10;
+          this.pagoRealizado = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](false);
+          this.fileForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]);
+          this.url = '';
+          this.nombreArchivo = '';
+          this.selectFile = null;
           this.pedidosFacade.MostrarPedido("0");
           this.pedidosFacade.MostrarTipoPedidos("0");
           this.pedidosFacade.MostrarMetodosPago("0");
@@ -6835,6 +6996,8 @@
         }, {
           key: "openDialog",
           value: function openDialog(template, params) {
+            this.isImageSaved = false;
+            this.pagoRealizado.setValue(false);
             this.formPedido = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
               //Valores de front para insertar tipo de pedido
               Id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]((params === null || params === void 0 ? void 0 : params.Id) || "0"),
@@ -6859,7 +7022,7 @@
         }, {
           key: "Guardar",
           value: function Guardar() {
-            var _this42 = this;
+            var _this44 = this;
 
             if (this.formPedido.invalid) {
               this.toast.mensajeWarning("Es requerido ingresar los campos validos", "");
@@ -6870,22 +7033,22 @@
 
             if (this.formPedido.get("Id").value === "0") {
               this.pedidosFacade.InsertarPedido(this.formPedido.value, function (respuesta) {
-                _this42.pedidosFacade.MostrarPedido("0");
+                _this44.pedidosFacade.MostrarPedido("0");
 
-                _this42.dialog.closeAll();
+                _this44.dialog.closeAll();
               });
             } else {
               this.pedidosFacade.ActualizarPedido(this.formPedido.value, function (respuesta) {
-                _this42.pedidosFacade.MostrarPedido("0");
+                _this44.pedidosFacade.MostrarPedido("0");
 
-                _this42.dialog.closeAll();
+                _this44.dialog.closeAll();
               });
             }
           }
         }, {
           key: "Eliminar",
           value: function Eliminar(params) {
-            var _this43 = this;
+            var _this45 = this;
 
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
               title: "Confirmación",
@@ -6898,8 +7061,8 @@
               cancelButtonText: "Cancelar"
             }).then(function (result) {
               if (result.isConfirmed) {
-                _this43.pedidosFacade.EliminarPedido(params.Id, function (respuesta) {
-                  _this43.pedidosFacade.MostrarPedido("0");
+                _this45.pedidosFacade.EliminarPedido(params.Id, function (respuesta) {
+                  _this45.pedidosFacade.MostrarPedido("0");
                 });
               }
             });
@@ -6922,6 +7085,167 @@
           value: function descargarImagen() {
             window.open(this.formPedido.value.url);
           }
+        }, {
+          key: "enviarPedido",
+          value: function enviarPedido() {
+            var _this46 = this;
+
+            if (this.formPedido.invalid) {
+              this.formPedido.markAllAsTouched();
+              this.toast.mensajeWarning('', 'Debe de ingresar los campos marcados como requeridos');
+              return;
+            }
+
+            ;
+            this.formData = new FormData();
+
+            if (this.formPedido.get("Id").value === "0") {
+              this.pedidosFacade.InsertarPedido(this.formPedido.value, function (respuestaPedido) {
+                if (respuestaPedido.hasError === false) {
+                  if (_this46.pagoRealizado.value == true) {
+                    if (_this46.formPedido.invalid) {
+                      _this46.toast.mensajeWarning('', 'Es requerido cargar el voucher de pago');
+
+                      return;
+                    }
+
+                    ;
+
+                    _this46.formData.append("archivo", _this46.fileForm.value);
+
+                    _this46.pedidosFacade.cargarArchivo(_this46.formData, function (respuestaArchivo) {
+                      if (respuestaArchivo.hasError === false) {
+                        _this46.formAdjunto = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
+                          id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](0),
+                          idPedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaPedido.data.Table0[0].Id),
+                          nombreAdjunto: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo || ''),
+                          url: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaArchivo.data.url),
+                          extension: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo.substring(_this46.nombreArchivo.indexOf('.'), _this46.nombreArchivo.length)),
+                          idEstado: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null)
+                        });
+
+                        _this46.pedidosFacade.InsertarArchivoAdjunto(_this46.formAdjunto.value, function (respuestAdjunto) {
+                          if (respuestAdjunto.hasError === false) {
+                            _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+
+                            _this46.pedidosFacade.MostrarPedido("0");
+
+                            _this46.dialog.closeAll();
+                          }
+                        });
+                      }
+                    });
+                  } else {
+                    _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+
+                    _this46.pedidosFacade.MostrarPedido("0");
+
+                    _this46.dialog.closeAll();
+                  }
+                }
+              });
+            } else {
+              this.pedidosFacade.ActualizarPedido(this.formPedido.value, function (respuestaPedido) {
+                if (respuestaPedido.hasError === false) {
+                  if (_this46.pagoRealizado.value == true) {
+                    if (_this46.formPedido.invalid) {
+                      _this46.toast.mensajeWarning('', 'Es requerido cargar el voucher de pago');
+
+                      return;
+                    }
+
+                    ;
+
+                    _this46.formData.append("archivo", _this46.fileForm.value);
+
+                    _this46.pedidosFacade.cargarArchivo(_this46.formData, function (respuestaArchivo) {
+                      if (respuestaArchivo.hasError === false) {
+                        _this46.formAdjunto = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
+                          id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](0),
+                          idPedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaPedido.data.Table0[0].Id),
+                          nombreAdjunto: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo || ''),
+                          url: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaArchivo.data.url),
+                          extension: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo.substring(_this46.nombreArchivo.indexOf('.'), _this46.nombreArchivo.length)),
+                          idEstado: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null)
+                        });
+
+                        _this46.pedidosFacade.InsertarArchivoAdjunto(_this46.formAdjunto.value, function (respuestAdjunto) {
+                          if (respuestAdjunto.hasError === false) {
+                            _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+
+                            _this46.pedidosFacade.MostrarPedido("0");
+
+                            _this46.dialog.closeAll();
+                          }
+                        });
+                      }
+                    });
+                  } else {
+                    _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+
+                    _this46.pedidosFacade.MostrarPedido("0");
+
+                    _this46.dialog.closeAll();
+                  }
+                }
+              });
+            }
+          }
+        }, {
+          key: "onFileSelect",
+          value: function onFileSelect(event) {
+            var _this47 = this;
+
+            if (event.target.files.length > 0) {
+              var file = event.target.files[0];
+              this.fileForm.setValue(file);
+            }
+
+            this.imageError = null;
+
+            if (event.target.files && event.target.files[0]) {
+              // Size Filter Bytes
+              this.nombreArchivo = event.target.files[0].name;
+              var max_size = 20971520;
+              var allowed_types = ["image/png", "image/jpeg"];
+              var max_height = 15200;
+              var max_width = 25600;
+
+              if (event.target.files[0].size > max_size) {
+                this.imageError = "Maximum size allowed is " + max_size / 1000 + "Mb";
+                return false;
+              }
+
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                var image = new Image();
+                image.src = e.target.result;
+                _this47.foto = image.src;
+
+                image.onload = function (rs) {
+                  var img_height = rs.currentTarget["height"];
+                  var img_width = rs.currentTarget["width"];
+
+                  if (img_height > max_height && img_width > max_width) {
+                    _this47.imageError = "Maximum dimentions allowed " + max_height + "*" + max_width + "px";
+                    return false;
+                  } else {
+                    var imgBase64Path = e.target.result;
+                    _this47.cardImageBase64 = imgBase64Path;
+                    _this47.isImageSaved = true;
+                    _this47.selectFile = imgBase64Path;
+                  }
+
+                  return _this47.selectFile;
+                };
+              };
+
+              reader.readAsDataURL(event.target.files[0]);
+            }
+
+            return true;
+          }
         }]);
 
         return PedidosComponent;
@@ -6936,10 +7260,10 @@
         selectors: [["app-pedidos"]],
         decls: 33,
         vars: 16,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["role", "cell ", "data-title", "Tipo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Detalle", 1, "tdp", "text-justify"], ["role", "cell ", "data-title", "Observacion", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Nombre Reparto", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Usuario Ingreso ", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdTipoPedido", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "IdMetodoPago", "required", ""], ["formControlName", "IdReparto"], ["formControlName", "IdUsuario"], ["formControlName", "idEstado"], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "formControlName", "DetallePedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Observacion", "formControlName", "Observacion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off"], ["class", "col-md-12", 4, "ngIf"], ["class", "col-md-12", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right", "mt-2"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["class", "button-principal", "mat-raised-button", "", 3, "click", 4, "ngIf"], [3, "value"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [1, "col-md-12", 2, "display", "flex", "justify-content", "center", "align-items", "center"], [1, "imagePedido", 3, "src"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["role", "cell ", "data-title", "Tipo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Detalle", 1, "tdp", "text-justify"], ["role", "cell ", "data-title", "Observacion", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Nombre Reparto", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Usuario Ingreso ", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdTipoPedido", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "IdMetodoPago", "required", ""], ["formControlName", "IdReparto"], ["formControlName", "IdUsuario"], ["formControlName", "idEstado"], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "formControlName", "DetallePedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Observacion", "formControlName", "Observacion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off"], ["class", "col-md-6 mt-2", 4, "ngIf"], [1, "col-md-6", "mt-2"], ["style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], ["class", "col-md-12", 4, "ngIf"], ["class", "col-md-12", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right", "mt-2"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["class", "button-principal", "mat-raised-button", "", 3, "click", 4, "ngIf"], [3, "value"], [3, "formControl"], ["class", "mt-2", 4, "ngIf"], [1, "mt-2"], [1, "uploadfilecontainer", 2, "display", "flex", "justify-content", "center", "align-items", "center", 3, "click"], [1, "p-2", "text-center"], ["type", "file", "hidden", "", "required", "", 3, "change"], ["fileInput", ""], [1, "imagePedido", 3, "src"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [1, "col-md-12", 2, "display", "flex", "justify-content", "center", "align-items", "center"]],
         template: function PedidosComponent_Template(rf, ctx) {
           if (rf & 1) {
-            var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+            var _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
@@ -6978,7 +7302,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_Template_button_click_11_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r28);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r35);
 
               var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](32);
 
@@ -7045,7 +7369,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 61, 21, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 64, 23, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
           }
 
           if (rf & 2) {
@@ -7070,9 +7394,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](29, 11, ctx.pedidosFacade.responseCargando$) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](30, 13, ctx.pedidosFacade.responsePedidos$).length > 0);
           }
         },
-        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkWithHref"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatPrefix"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _shared_loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_14__["MatPaginator"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogContent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_select__WEBPACK_IMPORTED_MODULE_15__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatHint"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_16__["CdkTextareaAutosize"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogClose"], _angular_material_core__WEBPACK_IMPORTED_MODULE_17__["MatOption"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["SlicePipe"], _core_pipe_search_pipe__WEBPACK_IMPORTED_MODULE_18__["SearchPipe"], _core_pipe_truncate_pipe_pipe__WEBPACK_IMPORTED_MODULE_19__["TruncatePipePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["DatePipe"]],
-        styles: [".imagePedido[_ngcontent-%COMP%] {\r\n    width: 30vw;\r\n    height: 30vh;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBlZGlkb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0FBQ2hCIiwiZmlsZSI6InBlZGlkb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZVBlZGlkbyB7XHJcbiAgICB3aWR0aDogMzB2dztcclxuICAgIGhlaWdodDogMzB2aDtcclxufSJdfQ== */"]
+        directives: [_angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkWithHref"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatPrefix"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _shared_loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_14__["MatPaginator"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogContent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_select__WEBPACK_IMPORTED_MODULE_15__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatHint"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_16__["CdkTextareaAutosize"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialogClose"], _angular_material_core__WEBPACK_IMPORTED_MODULE_17__["MatOption"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_18__["MatSlideToggle"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["SlicePipe"], _core_pipe_search_pipe__WEBPACK_IMPORTED_MODULE_19__["SearchPipe"], _core_pipe_truncate_pipe_pipe__WEBPACK_IMPORTED_MODULE_20__["TruncatePipePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["DatePipe"]],
+        styles: [".imagePedido[_ngcontent-%COMP%] {\r\n    width: 30vw;\r\n    height: 30vh;\r\n}\r\n.uploadfilecontainer[_ngcontent-%COMP%] {\r\n   \r\n    background-repeat: no-repeat;\r\n    background-size: 100px;\r\n    background-position: center;\r\n    height: 100px;\r\n    width: 50%;\r\n    margin: 20px auto;\r\n    border: 2px dashed #1C8ADB;\r\n    border-radius: 10px;\r\n}\r\n.uploadfilecontainer[_ngcontent-%COMP%]:hover {\r\n    cursor: pointer;\r\n    background-color: #9ecbec !important;\r\n    opacity: 0.8;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBlZGlkb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0FBQ2hCO0FBQ0E7O0lBRUksNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0QiwyQkFBMkI7SUFDM0IsYUFBYTtJQUNiLFVBQVU7SUFDVixpQkFBaUI7SUFDakIsMEJBQTBCO0lBQzFCLG1CQUFtQjtBQUN2QjtBQUVBO0lBQ0ksZUFBZTtJQUNmLG9DQUFvQztJQUNwQyxZQUFZO0FBQ2hCIiwiZmlsZSI6InBlZGlkb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZVBlZGlkbyB7XHJcbiAgICB3aWR0aDogMzB2dztcclxuICAgIGhlaWdodDogMzB2aDtcclxufVxyXG4udXBsb2FkZmlsZWNvbnRhaW5lciB7XHJcbiAgIFxyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICAgIG1hcmdpbjogMjBweCBhdXRvO1xyXG4gICAgYm9yZGVyOiAycHggZGFzaGVkICMxQzhBREI7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG59XHJcblxyXG4udXBsb2FkZmlsZWNvbnRhaW5lcjpob3ZlciB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOWVjYmVjICFpbXBvcnRhbnQ7XHJcbiAgICBvcGFjaXR5OiAwLjg7XHJcbn0iXX0= */"]
       });
       /*@__PURE__*/
 
@@ -7164,20 +7488,20 @@
         _createClass(TipoIdentificacionFacadeService, [{
           key: "MostrarTipoIdentificacion",
           value: function MostrarTipoIdentificacion(params) {
-            var _this44 = this;
+            var _this48 = this;
 
             this.Cargando$.next(true);
             this.TipoIdentificacion$.next([]);
             var request$ = this.dataApi.GetDataApi("personas/tipoIdentificacion/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this44.Cargando$.next(false);
+              _this48.Cargando$.next(false);
 
-              _this44.TipoIdentificacion$.next(result.data.Table0);
+              _this48.TipoIdentificacion$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this44.Cargando$.next(false);
+              _this48.Cargando$.next(false);
 
-              _this44.TipoIdentificacion$.next([]);
+              _this48.TipoIdentificacion$.next([]);
 
-              _this44._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los tipos de identificación', '');
+              _this48._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los tipos de identificación', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -7186,15 +7510,15 @@
         }, {
           key: "InsertarTipoIdentificacion",
           value: function InsertarTipoIdentificacion(params, respuesta) {
-            var _this45 = this;
+            var _this49 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PostDataApi("personas/tipoIdentificacion/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this45.Cargando$.next(false);
+              _this49.Cargando$.next(false);
 
-              _this45._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el tipo de identificación', '');
+              _this49._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el tipo de identificación', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -7203,15 +7527,15 @@
         }, {
           key: "ActualizarTipoIdentificacion",
           value: function ActualizarTipoIdentificacion(params, respuesta) {
-            var _this46 = this;
+            var _this50 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PutDataApi("personas/tipoIdentificacion/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this46.Cargando$.next(false);
+              _this50.Cargando$.next(false);
 
-              _this46._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el tipo de identificación', '');
+              _this50._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el tipo de identificación', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -7220,15 +7544,15 @@
         }, {
           key: "EliminarTipoIdentificacion",
           value: function EliminarTipoIdentificacion(params, respuesta) {
-            var _this47 = this;
+            var _this51 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.DeleteDataApiUrl("personas/tipoIdentificacion/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this47.Cargando$.next(false);
+              _this51.Cargando$.next(false);
 
-              _this47._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al eliminar el tipo de identificación', '');
+              _this51._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al eliminar el tipo de identificación', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));

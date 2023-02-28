@@ -41,877 +41,6 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-clientes-clientes-module"], {
     /***/
-    "1jcm":
-    /*!******************************************************************************!*\
-      !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slide-toggle.js ***!
-      \******************************************************************************/
-
-    /*! exports provided: MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS, MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR, MAT_SLIDE_TOGGLE_VALUE_ACCESSOR, MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule, MatSlideToggleRequiredValidator, _MatSlideToggleRequiredValidatorModule */
-
-    /***/
-    function jcm(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS", function () {
-        return MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR", function () {
-        return MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MAT_SLIDE_TOGGLE_VALUE_ACCESSOR", function () {
-        return MAT_SLIDE_TOGGLE_VALUE_ACCESSOR;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MatSlideToggle", function () {
-        return MatSlideToggle;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MatSlideToggleChange", function () {
-        return MatSlideToggleChange;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MatSlideToggleModule", function () {
-        return MatSlideToggleModule;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "MatSlideToggleRequiredValidator", function () {
-        return MatSlideToggleRequiredValidator;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "_MatSlideToggleRequiredValidatorModule", function () {
-        return _MatSlideToggleRequiredValidatorModule;
-      });
-      /* harmony import */
-
-
-      var _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/cdk/observers */
-      "GU7r");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "8Y7J");
-      /* harmony import */
-
-
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/material/core */
-      "FKr1");
-      /* harmony import */
-
-
-      var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/cdk/a11y */
-      "u47x");
-      /* harmony import */
-
-
-      var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/cdk/coercion */
-      "8LU1");
-      /* harmony import */
-
-
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/forms */
-      "s7LF");
-      /* harmony import */
-
-
-      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/platform-browser/animations */
-      "omvX");
-      /**
-       * @license
-       * Copyright Google LLC All Rights Reserved.
-       *
-       * Use of this source code is governed by an MIT-style license that can be
-       * found in the LICENSE file at https://angular.io/license
-       */
-
-      /** Injection token to be used to override the default options for `mat-slide-toggle`. */
-
-
-      var _c0 = ["thumbContainer"];
-      var _c1 = ["toggleBar"];
-      var _c2 = ["input"];
-
-      var _c3 = function _c3() {
-        return {
-          enterDuration: 150
-        };
-      };
-
-      var _c4 = ["*"];
-      var MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["InjectionToken"]('mat-slide-toggle-default-options', {
-        providedIn: 'root',
-        factory: function factory() {
-          return {
-            disableToggleValue: false
-          };
-        }
-      });
-      /**
-       * @license
-       * Copyright Google LLC All Rights Reserved.
-       *
-       * Use of this source code is governed by an MIT-style license that can be
-       * found in the LICENSE file at https://angular.io/license
-       */
-      // Increasing integer for generating unique ids for slide-toggle components.
-
-      var nextUniqueId = 0;
-      /** @docs-private */
-
-      var MAT_SLIDE_TOGGLE_VALUE_ACCESSOR = {
-        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALUE_ACCESSOR"],
-        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
-          return MatSlideToggle;
-        }),
-        multi: true
-      };
-      /** Change event object emitted by a MatSlideToggle. */
-
-      var MatSlideToggleChange = function MatSlideToggleChange(
-      /** The source MatSlideToggle of the event. */
-      source,
-      /** The new `checked` value of the MatSlideToggle. */
-      checked) {
-        _classCallCheck(this, MatSlideToggleChange);
-
-        this.source = source;
-        this.checked = checked;
-      }; // Boilerplate for applying mixins to MatSlideToggle.
-
-      /** @docs-private */
-
-
-      var MatSlideToggleBase = function MatSlideToggleBase(_elementRef) {
-        _classCallCheck(this, MatSlideToggleBase);
-
-        this._elementRef = _elementRef;
-      };
-
-      var _MatSlideToggleMixinBase = Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["mixinTabIndex"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["mixinColor"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["mixinDisableRipple"])(Object(_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["mixinDisabled"])(MatSlideToggleBase)), 'accent'));
-      /** Represents a slidable "switch" toggle that can be moved between on and off. */
-
-
-      var MatSlideToggle = /*#__PURE__*/function (_MatSlideToggleMixinB) {
-        _inherits(MatSlideToggle, _MatSlideToggleMixinB);
-
-        var _super = _createSuper(MatSlideToggle);
-
-        function MatSlideToggle(elementRef, _focusMonitor, _changeDetectorRef, tabIndex, defaults, _animationMode) {
-          var _this;
-
-          _classCallCheck(this, MatSlideToggle);
-
-          _this = _super.call(this, elementRef);
-          _this._focusMonitor = _focusMonitor;
-          _this._changeDetectorRef = _changeDetectorRef;
-          _this.defaults = defaults;
-          _this._animationMode = _animationMode;
-
-          _this._onChange = function (_) {};
-
-          _this._onTouched = function () {};
-
-          _this._uniqueId = "mat-slide-toggle-".concat(++nextUniqueId);
-          _this._required = false;
-          _this._checked = false;
-          /** Name value will be applied to the input element if present. */
-
-          _this.name = null;
-          /** A unique id for the slide-toggle input. If none is supplied, it will be auto-generated. */
-
-          _this.id = _this._uniqueId;
-          /** Whether the label should appear after or before the slide-toggle. Defaults to 'after'. */
-
-          _this.labelPosition = 'after';
-          /** Used to set the aria-label attribute on the underlying input element. */
-
-          _this.ariaLabel = null;
-          /** Used to set the aria-labelledby attribute on the underlying input element. */
-
-          _this.ariaLabelledby = null;
-          /** An event will be dispatched each time the slide-toggle changes its value. */
-
-          _this.change = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-          /**
-           * An event will be dispatched each time the slide-toggle input is toggled.
-           * This event is always emitted when the user toggles the slide toggle, but this does not mean
-           * the slide toggle's value has changed.
-           */
-
-          _this.toggleChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-          _this.tabIndex = parseInt(tabIndex) || 0;
-          return _this;
-        }
-        /** Whether the slide-toggle is required. */
-
-
-        _createClass(MatSlideToggle, [{
-          key: "required",
-          get: function get() {
-            return this._required;
-          },
-          set: function set(value) {
-            this._required = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
-          }
-          /** Whether the slide-toggle element is checked or not. */
-
-        }, {
-          key: "checked",
-          get: function get() {
-            return this._checked;
-          },
-          set: function set(value) {
-            this._checked = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
-
-            this._changeDetectorRef.markForCheck();
-          }
-          /** Returns the unique id for the visual hidden input. */
-
-        }, {
-          key: "inputId",
-          get: function get() {
-            return "".concat(this.id || this._uniqueId, "-input");
-          }
-        }, {
-          key: "ngAfterContentInit",
-          value: function ngAfterContentInit() {
-            var _this2 = this;
-
-            this._focusMonitor.monitor(this._elementRef, true).subscribe(function (focusOrigin) {
-              // Only forward focus manually when it was received programmatically or through the
-              // keyboard. We should not do this for mouse/touch focus for two reasons:
-              // 1. It can prevent clicks from landing in Chrome (see #18269).
-              // 2. They're already handled by the wrapping `label` element.
-              if (focusOrigin === 'keyboard' || focusOrigin === 'program') {
-                _this2._inputElement.nativeElement.focus();
-              } else if (!focusOrigin) {
-                // When a focused element becomes disabled, the browser *immediately* fires a blur event.
-                // Angular does not expect events to be raised during change detection, so any state
-                // change (such as a form control's 'ng-touched') will cause a changed-after-checked
-                // error. See https://github.com/angular/angular/issues/17793. To work around this,
-                // we defer telling the form control it has been touched until the next tick.
-                Promise.resolve().then(function () {
-                  return _this2._onTouched();
-                });
-              }
-            });
-          }
-        }, {
-          key: "ngOnDestroy",
-          value: function ngOnDestroy() {
-            this._focusMonitor.stopMonitoring(this._elementRef);
-          }
-          /** Method being called whenever the underlying input emits a change event. */
-
-        }, {
-          key: "_onChangeEvent",
-          value: function _onChangeEvent(event) {
-            // We always have to stop propagation on the change event.
-            // Otherwise the change event, from the input element, will bubble up and
-            // emit its event object to the component's `change` output.
-            event.stopPropagation();
-            this.toggleChange.emit(); // When the slide toggle's config disables toggle change event by setting
-            // `disableToggleValue: true`, the slide toggle's value does not change, and the
-            // checked state of the underlying input needs to be changed back.
-
-            if (this.defaults.disableToggleValue) {
-              this._inputElement.nativeElement.checked = this.checked;
-              return;
-            } // Sync the value from the underlying input element with the component instance.
-
-
-            this.checked = this._inputElement.nativeElement.checked; // Emit our custom change event only if the underlying input emitted one. This ensures that
-            // there is no change event, when the checked state changes programmatically.
-
-            this._emitChangeEvent();
-          }
-          /** Method being called whenever the slide-toggle has been clicked. */
-
-        }, {
-          key: "_onInputClick",
-          value: function _onInputClick(event) {
-            // We have to stop propagation for click events on the visual hidden input element.
-            // By default, when a user clicks on a label element, a generated click event will be
-            // dispatched on the associated input element. Since we are using a label element as our
-            // root container, the click event on the `slide-toggle` will be executed twice.
-            // The real click event will bubble up, and the generated click event also tries to bubble up.
-            // This will lead to multiple click events.
-            // Preventing bubbling for the second event will solve that issue.
-            event.stopPropagation();
-          }
-          /** Implemented as part of ControlValueAccessor. */
-
-        }, {
-          key: "writeValue",
-          value: function writeValue(value) {
-            this.checked = !!value;
-          }
-          /** Implemented as part of ControlValueAccessor. */
-
-        }, {
-          key: "registerOnChange",
-          value: function registerOnChange(fn) {
-            this._onChange = fn;
-          }
-          /** Implemented as part of ControlValueAccessor. */
-
-        }, {
-          key: "registerOnTouched",
-          value: function registerOnTouched(fn) {
-            this._onTouched = fn;
-          }
-          /** Implemented as a part of ControlValueAccessor. */
-
-        }, {
-          key: "setDisabledState",
-          value: function setDisabledState(isDisabled) {
-            this.disabled = isDisabled;
-
-            this._changeDetectorRef.markForCheck();
-          }
-          /** Focuses the slide-toggle. */
-
-        }, {
-          key: "focus",
-          value: function focus(options) {
-            this._focusMonitor.focusVia(this._inputElement, 'keyboard', options);
-          }
-          /** Toggles the checked state of the slide-toggle. */
-
-        }, {
-          key: "toggle",
-          value: function toggle() {
-            this.checked = !this.checked;
-
-            this._onChange(this.checked);
-          }
-          /**
-           * Emits a change event on the `change` output. Also notifies the FormControl about the change.
-           */
-
-        }, {
-          key: "_emitChangeEvent",
-          value: function _emitChangeEvent() {
-            this._onChange(this.checked);
-
-            this.change.emit(new MatSlideToggleChange(this, this.checked));
-          }
-          /** Method being called whenever the label text changes. */
-
-        }, {
-          key: "_onLabelTextChange",
-          value: function _onLabelTextChange() {
-            // Since the event of the `cdkObserveContent` directive runs outside of the zone, the
-            // slide-toggle component will be only marked for check, but no actual change detection runs
-            // automatically. Instead of going back into the zone in order to trigger a change detection
-            // which causes *all* components to be checked (if explicitly marked or not using OnPush),
-            // we only trigger an explicit change detection for the slide-toggle view and its children.
-            this._changeDetectorRef.detectChanges();
-          }
-        }]);
-
-        return MatSlideToggle;
-      }(_MatSlideToggleMixinBase);
-
-      MatSlideToggle.ɵfac = function MatSlideToggle_Factory(t) {
-        return new (t || MatSlideToggle)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__["FocusMonitor"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinjectAttribute"]('tabindex'), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"], 8));
-      };
-
-      MatSlideToggle.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
-        type: MatSlideToggle,
-        selectors: [["mat-slide-toggle"]],
-        viewQuery: function MatSlideToggle_Query(rf, ctx) {
-          if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c1, true);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c2, true);
-          }
-
-          if (rf & 2) {
-            var _t;
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx._thumbEl = _t.first);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx._thumbBarEl = _t.first);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx._inputElement = _t.first);
-          }
-        },
-        hostAttrs: [1, "mat-slide-toggle"],
-        hostVars: 12,
-        hostBindings: function MatSlideToggle_HostBindings(rf, ctx) {
-          if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵhostProperty"]("id", ctx.id);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("tabindex", ctx.disabled ? null : -1)("aria-label", null)("aria-labelledby", null);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("mat-checked", ctx.checked)("mat-disabled", ctx.disabled)("mat-slide-toggle-label-before", ctx.labelPosition == "before")("_mat-animation-noopable", ctx._animationMode === "NoopAnimations");
-          }
-        },
-        inputs: {
-          disabled: "disabled",
-          disableRipple: "disableRipple",
-          color: "color",
-          tabIndex: "tabIndex",
-          name: "name",
-          id: "id",
-          labelPosition: "labelPosition",
-          ariaLabel: ["aria-label", "ariaLabel"],
-          ariaLabelledby: ["aria-labelledby", "ariaLabelledby"],
-          required: "required",
-          checked: "checked"
-        },
-        outputs: {
-          change: "change",
-          toggleChange: "toggleChange"
-        },
-        exportAs: ["matSlideToggle"],
-        features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([MAT_SLIDE_TOGGLE_VALUE_ACCESSOR]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"]],
-        ngContentSelectors: _c4,
-        decls: 16,
-        vars: 18,
-        consts: [[1, "mat-slide-toggle-label"], ["label", ""], [1, "mat-slide-toggle-bar"], ["toggleBar", ""], ["type", "checkbox", "role", "switch", 1, "mat-slide-toggle-input", "cdk-visually-hidden", 3, "id", "required", "tabIndex", "checked", "disabled", "change", "click"], ["input", ""], [1, "mat-slide-toggle-thumb-container"], ["thumbContainer", ""], [1, "mat-slide-toggle-thumb"], ["mat-ripple", "", 1, "mat-slide-toggle-ripple", "mat-focus-indicator", 3, "matRippleTrigger", "matRippleDisabled", "matRippleCentered", "matRippleRadius", "matRippleAnimation"], [1, "mat-ripple-element", "mat-slide-toggle-persistent-ripple"], [1, "mat-slide-toggle-content", 3, "cdkObserveContent"], ["labelContent", ""], [2, "display", "none"]],
-        template: function MatSlideToggle_Template(rf, ctx) {
-          if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "label", 0, 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2, 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "input", 4, 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function MatSlideToggle_Template_input_change_4_listener($event) {
-              return ctx._onChangeEvent($event);
-            })("click", function MatSlideToggle_Template_input_click_4_listener($event) {
-              return ctx._onInputClick($event);
-            });
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6, 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "div", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "div", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "span", 11, 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("cdkObserveContent", function MatSlideToggle_Template_span_cdkObserveContent_11_listener() {
-              return ctx._onLabelTextChange();
-            });
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "span", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "\xA0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](15);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-          }
-
-          if (rf & 2) {
-            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](1);
-
-            var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("for", ctx.inputId);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("mat-slide-toggle-bar-no-side-margin", !_r4.textContent || !_r4.textContent.trim());
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("id", ctx.inputId)("required", ctx.required)("tabIndex", ctx.tabIndex)("checked", ctx.checked)("disabled", ctx.disabled);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("name", ctx.name)("aria-checked", ctx.checked.toString())("aria-label", ctx.ariaLabel)("aria-labelledby", ctx.ariaLabelledby);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("matRippleTrigger", _r0)("matRippleDisabled", ctx.disableRipple || ctx.disabled)("matRippleCentered", true)("matRippleRadius", 20)("matRippleAnimation", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](17, _c3));
-          }
-        },
-        directives: [_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatRipple"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_0__["CdkObserveContent"]],
-        styles: [".mat-slide-toggle{display:inline-block;height:24px;max-width:100%;line-height:24px;white-space:nowrap;outline:none;-webkit-tap-highlight-color:transparent}.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(16px, 0, 0)}[dir=rtl] .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(-16px, 0, 0)}.mat-slide-toggle.mat-disabled{opacity:.38}.mat-slide-toggle.mat-disabled .mat-slide-toggle-label,.mat-slide-toggle.mat-disabled .mat-slide-toggle-thumb-container{cursor:default}.mat-slide-toggle-label{display:flex;flex:1;flex-direction:row;align-items:center;height:inherit;cursor:pointer}.mat-slide-toggle-content{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mat-slide-toggle-label-before .mat-slide-toggle-label{order:1}.mat-slide-toggle-label-before .mat-slide-toggle-bar{order:2}[dir=rtl] .mat-slide-toggle-label-before .mat-slide-toggle-bar,.mat-slide-toggle-bar{margin-right:8px;margin-left:0}[dir=rtl] .mat-slide-toggle-bar,.mat-slide-toggle-label-before .mat-slide-toggle-bar{margin-left:8px;margin-right:0}.mat-slide-toggle-bar-no-side-margin{margin-left:0;margin-right:0}.mat-slide-toggle-thumb-container{position:absolute;z-index:1;width:20px;height:20px;top:-3px;left:0;transform:translate3d(0, 0, 0);transition:all 80ms linear;transition-property:transform}._mat-animation-noopable .mat-slide-toggle-thumb-container{transition:none}[dir=rtl] .mat-slide-toggle-thumb-container{left:auto;right:0}.mat-slide-toggle-thumb{height:20px;width:20px;border-radius:50%}.mat-slide-toggle-bar{position:relative;width:36px;height:14px;flex-shrink:0;border-radius:8px}.mat-slide-toggle-input{bottom:0;left:10px}[dir=rtl] .mat-slide-toggle-input{left:auto;right:10px}.mat-slide-toggle-bar,.mat-slide-toggle-thumb{transition:all 80ms linear;transition-property:background-color;transition-delay:50ms}._mat-animation-noopable .mat-slide-toggle-bar,._mat-animation-noopable .mat-slide-toggle-thumb{transition:none}.mat-slide-toggle .mat-slide-toggle-ripple{position:absolute;top:calc(50% - 20px);left:calc(50% - 20px);height:40px;width:40px;z-index:1;pointer-events:none}.mat-slide-toggle .mat-slide-toggle-ripple .mat-ripple-element:not(.mat-slide-toggle-persistent-ripple){opacity:.12}.mat-slide-toggle-persistent-ripple{width:100%;height:100%;transform:none}.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:.04}.mat-slide-toggle:not(.mat-disabled).cdk-keyboard-focused .mat-slide-toggle-persistent-ripple{opacity:.12}.mat-slide-toggle-persistent-ripple,.mat-slide-toggle.mat-disabled .mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:0}@media(hover: none){.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{display:none}}.cdk-high-contrast-active .mat-slide-toggle-thumb,.cdk-high-contrast-active .mat-slide-toggle-bar{border:1px solid}.cdk-high-contrast-active .mat-slide-toggle.cdk-keyboard-focused .mat-slide-toggle-bar{outline:2px dotted;outline-offset:5px}\n"],
-        encapsulation: 2,
-        changeDetection: 0
-      });
-
-      MatSlideToggle.ctorParameters = function () {
-        return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-        }, {
-          type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__["FocusMonitor"]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
-        }, {
-          type: String,
-          decorators: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"],
-            args: ['tabindex']
-          }]
-        }, {
-          type: undefined,
-          decorators: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
-            args: [MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS]
-          }]
-        }, {
-          type: String,
-          decorators: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
-          }, {
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
-            args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"]]
-          }]
-        }];
-      };
-
-      MatSlideToggle.propDecorators = {
-        _thumbEl: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-          args: ['thumbContainer']
-        }],
-        _thumbBarEl: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-          args: ['toggleBar']
-        }],
-        name: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        id: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        labelPosition: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        ariaLabel: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
-          args: ['aria-label']
-        }],
-        ariaLabelledby: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
-          args: ['aria-labelledby']
-        }],
-        required: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        checked: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        change: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        toggleChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        _inputElement: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-          args: ['input']
-        }]
-      };
-      /*@__PURE__*/
-
-      (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MatSlideToggle, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
-          args: [{
-            selector: 'mat-slide-toggle',
-            exportAs: 'matSlideToggle',
-            host: {
-              'class': 'mat-slide-toggle',
-              '[id]': 'id',
-              // Needs to be `-1` so it can still receive programmatic focus.
-              '[attr.tabindex]': 'disabled ? null : -1',
-              '[attr.aria-label]': 'null',
-              '[attr.aria-labelledby]': 'null',
-              '[class.mat-checked]': 'checked',
-              '[class.mat-disabled]': 'disabled',
-              '[class.mat-slide-toggle-label-before]': 'labelPosition == "before"',
-              '[class._mat-animation-noopable]': '_animationMode === "NoopAnimations"'
-            },
-            template: "<label [attr.for]=\"inputId\" class=\"mat-slide-toggle-label\" #label>\n  <div #toggleBar class=\"mat-slide-toggle-bar\"\n       [class.mat-slide-toggle-bar-no-side-margin]=\"!labelContent.textContent || !labelContent.textContent.trim()\">\n\n    <input #input class=\"mat-slide-toggle-input cdk-visually-hidden\" type=\"checkbox\"\n           role=\"switch\"\n           [id]=\"inputId\"\n           [required]=\"required\"\n           [tabIndex]=\"tabIndex\"\n           [checked]=\"checked\"\n           [disabled]=\"disabled\"\n           [attr.name]=\"name\"\n           [attr.aria-checked]=\"checked.toString()\"\n           [attr.aria-label]=\"ariaLabel\"\n           [attr.aria-labelledby]=\"ariaLabelledby\"\n           (change)=\"_onChangeEvent($event)\"\n           (click)=\"_onInputClick($event)\">\n\n    <div class=\"mat-slide-toggle-thumb-container\" #thumbContainer>\n      <div class=\"mat-slide-toggle-thumb\"></div>\n      <div class=\"mat-slide-toggle-ripple mat-focus-indicator\" mat-ripple\n           [matRippleTrigger]=\"label\"\n           [matRippleDisabled]=\"disableRipple || disabled\"\n           [matRippleCentered]=\"true\"\n           [matRippleRadius]=\"20\"\n           [matRippleAnimation]=\"{enterDuration: 150}\">\n\n        <div class=\"mat-ripple-element mat-slide-toggle-persistent-ripple\"></div>\n      </div>\n    </div>\n\n  </div>\n\n  <span class=\"mat-slide-toggle-content\" #labelContent (cdkObserveContent)=\"_onLabelTextChange()\">\n    <!-- Add an invisible span so JAWS can read the label -->\n    <span style=\"display:none\">&nbsp;</span>\n    <ng-content></ng-content>\n  </span>\n</label>\n",
-            providers: [MAT_SLIDE_TOGGLE_VALUE_ACCESSOR],
-            inputs: ['disabled', 'disableRipple', 'color', 'tabIndex'],
-            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
-            changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
-            styles: [".mat-slide-toggle{display:inline-block;height:24px;max-width:100%;line-height:24px;white-space:nowrap;outline:none;-webkit-tap-highlight-color:transparent}.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(16px, 0, 0)}[dir=rtl] .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container{transform:translate3d(-16px, 0, 0)}.mat-slide-toggle.mat-disabled{opacity:.38}.mat-slide-toggle.mat-disabled .mat-slide-toggle-label,.mat-slide-toggle.mat-disabled .mat-slide-toggle-thumb-container{cursor:default}.mat-slide-toggle-label{display:flex;flex:1;flex-direction:row;align-items:center;height:inherit;cursor:pointer}.mat-slide-toggle-content{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mat-slide-toggle-label-before .mat-slide-toggle-label{order:1}.mat-slide-toggle-label-before .mat-slide-toggle-bar{order:2}[dir=rtl] .mat-slide-toggle-label-before .mat-slide-toggle-bar,.mat-slide-toggle-bar{margin-right:8px;margin-left:0}[dir=rtl] .mat-slide-toggle-bar,.mat-slide-toggle-label-before .mat-slide-toggle-bar{margin-left:8px;margin-right:0}.mat-slide-toggle-bar-no-side-margin{margin-left:0;margin-right:0}.mat-slide-toggle-thumb-container{position:absolute;z-index:1;width:20px;height:20px;top:-3px;left:0;transform:translate3d(0, 0, 0);transition:all 80ms linear;transition-property:transform}._mat-animation-noopable .mat-slide-toggle-thumb-container{transition:none}[dir=rtl] .mat-slide-toggle-thumb-container{left:auto;right:0}.mat-slide-toggle-thumb{height:20px;width:20px;border-radius:50%}.mat-slide-toggle-bar{position:relative;width:36px;height:14px;flex-shrink:0;border-radius:8px}.mat-slide-toggle-input{bottom:0;left:10px}[dir=rtl] .mat-slide-toggle-input{left:auto;right:10px}.mat-slide-toggle-bar,.mat-slide-toggle-thumb{transition:all 80ms linear;transition-property:background-color;transition-delay:50ms}._mat-animation-noopable .mat-slide-toggle-bar,._mat-animation-noopable .mat-slide-toggle-thumb{transition:none}.mat-slide-toggle .mat-slide-toggle-ripple{position:absolute;top:calc(50% - 20px);left:calc(50% - 20px);height:40px;width:40px;z-index:1;pointer-events:none}.mat-slide-toggle .mat-slide-toggle-ripple .mat-ripple-element:not(.mat-slide-toggle-persistent-ripple){opacity:.12}.mat-slide-toggle-persistent-ripple{width:100%;height:100%;transform:none}.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:.04}.mat-slide-toggle:not(.mat-disabled).cdk-keyboard-focused .mat-slide-toggle-persistent-ripple{opacity:.12}.mat-slide-toggle-persistent-ripple,.mat-slide-toggle.mat-disabled .mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{opacity:0}@media(hover: none){.mat-slide-toggle-bar:hover .mat-slide-toggle-persistent-ripple{display:none}}.cdk-high-contrast-active .mat-slide-toggle-thumb,.cdk-high-contrast-active .mat-slide-toggle-bar{border:1px solid}.cdk-high-contrast-active .mat-slide-toggle.cdk-keyboard-focused .mat-slide-toggle-bar{outline:2px dotted;outline-offset:5px}\n"]
-          }]
-        }], function () {
-          return [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-          }, {
-            type: _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_3__["FocusMonitor"]
-          }, {
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
-          }, {
-            type: String,
-            decorators: [{
-              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"],
-              args: ['tabindex']
-            }]
-          }, {
-            type: undefined,
-            decorators: [{
-              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
-              args: [MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS]
-            }]
-          }, {
-            type: String,
-            decorators: [{
-              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
-            }, {
-              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
-              args: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["ANIMATION_MODULE_TYPE"]]
-            }]
-          }];
-        }, {
-          name: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-          }],
-          id: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-          }],
-          labelPosition: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-          }],
-          ariaLabel: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
-            args: ['aria-label']
-          }],
-          ariaLabelledby: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
-            args: ['aria-labelledby']
-          }],
-          change: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-          }],
-          toggleChange: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-          }],
-          required: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-          }],
-          checked: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-          }],
-          _thumbEl: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-            args: ['thumbContainer']
-          }],
-          _thumbBarEl: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-            args: ['toggleBar']
-          }],
-          _inputElement: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-            args: ['input']
-          }]
-        });
-      })();
-      /**
-       * @license
-       * Copyright Google LLC All Rights Reserved.
-       *
-       * Use of this source code is governed by an MIT-style license that can be
-       * found in the LICENSE file at https://angular.io/license
-       */
-
-
-      var MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR = {
-        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NG_VALIDATORS"],
-        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () {
-          return MatSlideToggleRequiredValidator;
-        }),
-        multi: true
-      };
-      /**
-       * Validator for Material slide-toggle components with the required attribute in a
-       * template-driven form. The default validator for required form controls asserts
-       * that the control value is not undefined but that is not appropriate for a slide-toggle
-       * where the value is always defined.
-       *
-       * Required slide-toggle form controls are valid when checked.
-       */
-
-      var MatSlideToggleRequiredValidator = /*#__PURE__*/function (_angular_forms__WEBPA) {
-        _inherits(MatSlideToggleRequiredValidator, _angular_forms__WEBPA);
-
-        var _super2 = _createSuper(MatSlideToggleRequiredValidator);
-
-        function MatSlideToggleRequiredValidator() {
-          _classCallCheck(this, MatSlideToggleRequiredValidator);
-
-          return _super2.apply(this, arguments);
-        }
-
-        return MatSlideToggleRequiredValidator;
-      }(_angular_forms__WEBPACK_IMPORTED_MODULE_5__["CheckboxRequiredValidator"]);
-
-      MatSlideToggleRequiredValidator.ɵfac = function MatSlideToggleRequiredValidator_Factory(t) {
-        return ɵMatSlideToggleRequiredValidator_BaseFactory(t || MatSlideToggleRequiredValidator);
-      };
-
-      MatSlideToggleRequiredValidator.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
-        type: MatSlideToggleRequiredValidator,
-        selectors: [["mat-slide-toggle", "required", "", "formControlName", ""], ["mat-slide-toggle", "required", "", "formControl", ""], ["mat-slide-toggle", "required", "", "ngModel", ""]],
-        features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵInheritDefinitionFeature"]]
-      });
-
-      var ɵMatSlideToggleRequiredValidator_BaseFactory = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetInheritedFactory"](MatSlideToggleRequiredValidator);
-      /*@__PURE__*/
-
-
-      (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MatSlideToggleRequiredValidator, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
-          args: [{
-            selector: "mat-slide-toggle[required][formControlName],\n             mat-slide-toggle[required][formControl], mat-slide-toggle[required][ngModel]",
-            providers: [MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR]
-          }]
-        }], null, null);
-      })();
-      /**
-       * @license
-       * Copyright Google LLC All Rights Reserved.
-       *
-       * Use of this source code is governed by an MIT-style license that can be
-       * found in the LICENSE file at https://angular.io/license
-       */
-
-      /** This module is used by both original and MDC-based slide-toggle implementations. */
-
-
-      var _MatSlideToggleRequiredValidatorModule = function _MatSlideToggleRequiredValidatorModule() {
-        _classCallCheck(this, _MatSlideToggleRequiredValidatorModule);
-      };
-
-      _MatSlideToggleRequiredValidatorModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-        type: _MatSlideToggleRequiredValidatorModule
-      });
-      _MatSlideToggleRequiredValidatorModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-        factory: function _MatSlideToggleRequiredValidatorModule_Factory(t) {
-          return new (t || _MatSlideToggleRequiredValidatorModule)();
-        }
-      });
-
-      (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](_MatSlideToggleRequiredValidatorModule, {
-          declarations: [MatSlideToggleRequiredValidator],
-          exports: [MatSlideToggleRequiredValidator]
-        });
-      })();
-      /*@__PURE__*/
-
-
-      (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](_MatSlideToggleRequiredValidatorModule, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
-          args: [{
-            exports: [MatSlideToggleRequiredValidator],
-            declarations: [MatSlideToggleRequiredValidator]
-          }]
-        }], null, null);
-      })();
-
-      var MatSlideToggleModule = function MatSlideToggleModule() {
-        _classCallCheck(this, MatSlideToggleModule);
-      };
-
-      MatSlideToggleModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-        type: MatSlideToggleModule
-      });
-      MatSlideToggleModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-        factory: function MatSlideToggleModule_Factory(t) {
-          return new (t || MatSlideToggleModule)();
-        },
-        imports: [[_MatSlideToggleRequiredValidatorModule, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatRippleModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_0__["ObserversModule"]], _MatSlideToggleRequiredValidatorModule, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]]
-      });
-
-      (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](MatSlideToggleModule, {
-          declarations: function declarations() {
-            return [MatSlideToggle];
-          },
-          imports: function imports() {
-            return [_MatSlideToggleRequiredValidatorModule, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatRippleModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_0__["ObserversModule"]];
-          },
-          exports: function exports() {
-            return [_MatSlideToggleRequiredValidatorModule, MatSlideToggle, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]];
-          }
-        });
-      })();
-      /*@__PURE__*/
-
-
-      (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MatSlideToggleModule, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
-          args: [{
-            imports: [_MatSlideToggleRequiredValidatorModule, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatRippleModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"], _angular_cdk_observers__WEBPACK_IMPORTED_MODULE_0__["ObserversModule"]],
-            exports: [_MatSlideToggleRequiredValidatorModule, MatSlideToggle, _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatCommonModule"]],
-            declarations: [MatSlideToggle]
-          }]
-        }], null, null);
-      })();
-      /**
-       * @license
-       * Copyright Google LLC All Rights Reserved.
-       *
-       * Use of this source code is governed by an MIT-style license that can be
-       * found in the LICENSE file at https://angular.io/license
-       */
-
-      /**
-       * Generated bundle index. Do not edit.
-       */
-      //# sourceMappingURL=slide-toggle.js.map
-
-      /***/
-
-    },
-
-    /***/
     "1khV":
     /*!*****************************************************!*\
       !*** ./src/app/modules/clientes/clientes.module.ts ***!
@@ -1320,54 +449,54 @@
       var MatBottomSheetContainer = /*#__PURE__*/function (_angular_cdk_portal__) {
         _inherits(MatBottomSheetContainer, _angular_cdk_portal__);
 
-        var _super3 = _createSuper(MatBottomSheetContainer);
+        var _super = _createSuper(MatBottomSheetContainer);
 
         function MatBottomSheetContainer(_elementRef, _changeDetectorRef, _focusTrapFactory, breakpointObserver, document,
         /** The bottom sheet configuration. */
         bottomSheetConfig) {
-          var _this3;
+          var _this;
 
           _classCallCheck(this, MatBottomSheetContainer);
 
-          _this3 = _super3.call(this);
-          _this3._elementRef = _elementRef;
-          _this3._changeDetectorRef = _changeDetectorRef;
-          _this3._focusTrapFactory = _focusTrapFactory;
-          _this3.bottomSheetConfig = bottomSheetConfig;
+          _this = _super.call(this);
+          _this._elementRef = _elementRef;
+          _this._changeDetectorRef = _changeDetectorRef;
+          _this._focusTrapFactory = _focusTrapFactory;
+          _this.bottomSheetConfig = bottomSheetConfig;
           /** The state of the bottom sheet animations. */
 
-          _this3._animationState = 'void';
+          _this._animationState = 'void';
           /** Emits whenever the state of the animation changes. */
 
-          _this3._animationStateChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this._animationStateChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
           /** Element that was focused before the bottom sheet was opened. */
 
-          _this3._elementFocusedBeforeOpened = null;
+          _this._elementFocusedBeforeOpened = null;
           /**
            * Attaches a DOM portal to the bottom sheet container.
            * @deprecated To be turned into a method.
            * @breaking-change 10.0.0
            */
 
-          _this3.attachDomPortal = function (portal) {
-            _this3._validatePortalAttached();
+          _this.attachDomPortal = function (portal) {
+            _this._validatePortalAttached();
 
-            _this3._setPanelClass();
+            _this._setPanelClass();
 
-            _this3._savePreviouslyFocusedElement();
+            _this._savePreviouslyFocusedElement();
 
-            return _this3._portalOutlet.attachDomPortal(portal);
+            return _this._portalOutlet.attachDomPortal(portal);
           };
 
-          _this3._document = document;
-          _this3._breakpointSubscription = breakpointObserver.observe([_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Medium, _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Large, _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].XLarge]).subscribe(function () {
-            _this3._toggleClass('mat-bottom-sheet-container-medium', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Medium));
+          _this._document = document;
+          _this._breakpointSubscription = breakpointObserver.observe([_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Medium, _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Large, _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].XLarge]).subscribe(function () {
+            _this._toggleClass('mat-bottom-sheet-container-medium', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Medium));
 
-            _this3._toggleClass('mat-bottom-sheet-container-large', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Large));
+            _this._toggleClass('mat-bottom-sheet-container-large', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Large));
 
-            _this3._toggleClass('mat-bottom-sheet-container-xlarge', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].XLarge));
+            _this._toggleClass('mat-bottom-sheet-container-xlarge', breakpointObserver.isMatched(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].XLarge));
           });
-          return _this3;
+          return _this;
         }
         /** Attach a component portal as content to this bottom sheet container. */
 
@@ -1522,13 +651,13 @@
         }, {
           key: "_savePreviouslyFocusedElement",
           value: function _savePreviouslyFocusedElement() {
-            var _this4 = this;
+            var _this2 = this;
 
             this._elementFocusedBeforeOpened = this._document.activeElement; // The `focus` method isn't available during server-side rendering.
 
             if (this._elementRef.nativeElement.focus) {
               Promise.resolve().then(function () {
-                return _this4._elementRef.nativeElement.focus();
+                return _this2._elementRef.nativeElement.focus();
               });
             }
           }
@@ -1740,7 +869,7 @@
 
       var MatBottomSheetRef = /*#__PURE__*/function () {
         function MatBottomSheetRef(containerInstance, _overlayRef) {
-          var _this5 = this;
+          var _this3 = this;
 
           _classCallCheck(this, MatBottomSheetRef);
 
@@ -1757,33 +886,33 @@
           containerInstance._animationStateChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["filter"])(function (event) {
             return event.phaseName === 'done' && event.toState === 'visible';
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["take"])(1)).subscribe(function () {
-            _this5._afterOpened.next();
+            _this3._afterOpened.next();
 
-            _this5._afterOpened.complete();
+            _this3._afterOpened.complete();
           }); // Dispose overlay when closing animation is complete
 
 
           containerInstance._animationStateChanged.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["filter"])(function (event) {
             return event.phaseName === 'done' && event.toState === 'hidden';
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["take"])(1)).subscribe(function () {
-            clearTimeout(_this5._closeFallbackTimeout);
+            clearTimeout(_this3._closeFallbackTimeout);
 
             _overlayRef.dispose();
           });
 
           _overlayRef.detachments().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["take"])(1)).subscribe(function () {
-            _this5._afterDismissed.next(_this5._result);
+            _this3._afterDismissed.next(_this3._result);
 
-            _this5._afterDismissed.complete();
+            _this3._afterDismissed.complete();
           });
 
           Object(rxjs__WEBPACK_IMPORTED_MODULE_9__["merge"])(_overlayRef.backdropClick(), _overlayRef.keydownEvents().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_11__["filter"])(function (event) {
             return event.keyCode === _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__["ESCAPE"];
           }))).subscribe(function (event) {
-            if (!_this5.disableClose && (event.type !== 'keydown' || !Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__["hasModifierKey"])(event))) {
+            if (!_this3.disableClose && (event.type !== 'keydown' || !Object(_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__["hasModifierKey"])(event))) {
               event.preventDefault();
 
-              _this5.dismiss();
+              _this3.dismiss();
             }
           });
         }
@@ -1796,7 +925,7 @@
         _createClass(MatBottomSheetRef, [{
           key: "dismiss",
           value: function dismiss(result) {
-            var _this6 = this;
+            var _this4 = this;
 
             if (!this._afterDismissed.closed) {
               // Transition the backdrop in parallel to the bottom sheet.
@@ -1808,11 +937,11 @@
                 // timeout which will clean everything up if the animation hasn't fired within the specified
                 // amount of time plus 100ms. We don't need to run this outside the NgZone, because for the
                 // vast majority of cases the timeout will have been cleared before it has fired.
-                _this6._closeFallbackTimeout = setTimeout(function () {
-                  _this6._overlayRef.dispose();
+                _this4._closeFallbackTimeout = setTimeout(function () {
+                  _this4._overlayRef.dispose();
                 }, event.totalTime + 100);
 
-                _this6._overlayRef.detachBackdrop();
+                _this4._overlayRef.detachBackdrop();
               });
 
               this._result = result;
@@ -1900,7 +1029,7 @@
         }, {
           key: "open",
           value: function open(componentOrTemplateRef, config) {
-            var _this7 = this;
+            var _this5 = this;
 
             var _config = _applyConfigDefaults(this._defaultOptions || new MatBottomSheetConfig(), config);
 
@@ -1924,8 +1053,8 @@
 
             ref.afterDismissed().subscribe(function () {
               // Clear the bottom sheet ref if it hasn't already been replaced by a newer one.
-              if (_this7._openedBottomSheetRef == ref) {
-                _this7._openedBottomSheetRef = null;
+              if (_this5._openedBottomSheetRef == ref) {
+                _this5._openedBottomSheetRef = null;
               }
             });
 
@@ -2539,14 +1668,14 @@
         }, {
           key: "cache",
           value: function cache(elements) {
-            var _this8 = this;
+            var _this6 = this;
 
             this.clear();
             this.positions.set(this._document, {
               scrollPosition: this._viewportRuler.getViewportScrollPosition()
             });
             elements.forEach(function (element) {
-              _this8.positions.set(element, {
+              _this6.positions.set(element, {
                 scrollPosition: {
                   top: element.scrollTop,
                   left: element.scrollLeft
@@ -2716,7 +1845,7 @@
 
       var DragRef = /*#__PURE__*/function () {
         function DragRef(element, _config, _document, _ngZone, _viewportRuler, _dragDropRegistry) {
-          var _this9 = this;
+          var _this7 = this;
 
           _classCallCheck(this, DragRef);
 
@@ -2809,20 +1938,20 @@
           /** Handler for the `mousedown`/`touchstart` events. */
 
           this._pointerDown = function (event) {
-            _this9.beforeStarted.next(); // Delegate the event based on whether it started from a handle or the element itself.
+            _this7.beforeStarted.next(); // Delegate the event based on whether it started from a handle or the element itself.
 
 
-            if (_this9._handles.length) {
-              var targetHandle = _this9._handles.find(function (handle) {
+            if (_this7._handles.length) {
+              var targetHandle = _this7._handles.find(function (handle) {
                 var target = event.target;
                 return !!target && (target === handle || handle.contains(target));
               });
 
-              if (targetHandle && !_this9._disabledHandles.has(targetHandle) && !_this9.disabled) {
-                _this9._initializeDragSequence(targetHandle, event);
+              if (targetHandle && !_this7._disabledHandles.has(targetHandle) && !_this7.disabled) {
+                _this7._initializeDragSequence(targetHandle, event);
               }
-            } else if (!_this9.disabled) {
-              _this9._initializeDragSequence(_this9._rootElement, event);
+            } else if (!_this7.disabled) {
+              _this7._initializeDragSequence(_this7._rootElement, event);
             }
           };
           /** Handler that is invoked when the user moves their pointer after they've initiated a drag. */
@@ -2833,23 +1962,23 @@
             // native actions like dragging the selected text or images with the mouse.
             event.preventDefault();
 
-            var pointerPosition = _this9._getPointerPositionOnPage(event);
+            var pointerPosition = _this7._getPointerPositionOnPage(event);
 
-            if (!_this9._hasStartedDragging) {
-              var distanceX = Math.abs(pointerPosition.x - _this9._pickupPositionOnPage.x);
-              var distanceY = Math.abs(pointerPosition.y - _this9._pickupPositionOnPage.y);
-              var isOverThreshold = distanceX + distanceY >= _this9._config.dragStartThreshold; // Only start dragging after the user has moved more than the minimum distance in either
+            if (!_this7._hasStartedDragging) {
+              var distanceX = Math.abs(pointerPosition.x - _this7._pickupPositionOnPage.x);
+              var distanceY = Math.abs(pointerPosition.y - _this7._pickupPositionOnPage.y);
+              var isOverThreshold = distanceX + distanceY >= _this7._config.dragStartThreshold; // Only start dragging after the user has moved more than the minimum distance in either
               // direction. Note that this is preferrable over doing something like `skip(minimumDistance)`
               // in the `pointerMove` subscription, because we're not guaranteed to have one move event
               // per pixel of movement (e.g. if the user moves their pointer quickly).
 
               if (isOverThreshold) {
-                var isDelayElapsed = Date.now() >= _this9._dragStartTime + _this9._getDragStartDelay(event);
+                var isDelayElapsed = Date.now() >= _this7._dragStartTime + _this7._getDragStartDelay(event);
 
-                var container = _this9._dropContainer;
+                var container = _this7._dropContainer;
 
                 if (!isDelayElapsed) {
-                  _this9._endDragSequence(event);
+                  _this7._endDragSequence(event);
 
                   return;
                 } // Prevent other drag sequences from starting while something in the container is still
@@ -2858,10 +1987,10 @@
 
 
                 if (!container || !container.isDragging() && !container.isReceiving()) {
-                  _this9._hasStartedDragging = true;
+                  _this7._hasStartedDragging = true;
 
-                  _this9._ngZone.run(function () {
-                    return _this9._startDragSequence(event);
+                  _this7._ngZone.run(function () {
+                    return _this7._startDragSequence(event);
                   });
                 }
               }
@@ -2870,49 +1999,49 @@
             } // We only need the preview dimensions if we have a boundary element.
 
 
-            if (_this9._boundaryElement) {
+            if (_this7._boundaryElement) {
               // Cache the preview element rect if we haven't cached it already or if
               // we cached it too early before the element dimensions were computed.
-              if (!_this9._previewRect || !_this9._previewRect.width && !_this9._previewRect.height) {
-                _this9._previewRect = (_this9._preview || _this9._rootElement).getBoundingClientRect();
+              if (!_this7._previewRect || !_this7._previewRect.width && !_this7._previewRect.height) {
+                _this7._previewRect = (_this7._preview || _this7._rootElement).getBoundingClientRect();
               }
             }
 
-            var constrainedPointerPosition = _this9._getConstrainedPointerPosition(pointerPosition);
+            var constrainedPointerPosition = _this7._getConstrainedPointerPosition(pointerPosition);
 
-            _this9._hasMoved = true;
-            _this9._lastKnownPointerPosition = pointerPosition;
+            _this7._hasMoved = true;
+            _this7._lastKnownPointerPosition = pointerPosition;
 
-            _this9._updatePointerDirectionDelta(constrainedPointerPosition);
+            _this7._updatePointerDirectionDelta(constrainedPointerPosition);
 
-            if (_this9._dropContainer) {
-              _this9._updateActiveDropContainer(constrainedPointerPosition, pointerPosition);
+            if (_this7._dropContainer) {
+              _this7._updateActiveDropContainer(constrainedPointerPosition, pointerPosition);
             } else {
-              var activeTransform = _this9._activeTransform;
-              activeTransform.x = constrainedPointerPosition.x - _this9._pickupPositionOnPage.x + _this9._passiveTransform.x;
-              activeTransform.y = constrainedPointerPosition.y - _this9._pickupPositionOnPage.y + _this9._passiveTransform.y;
+              var activeTransform = _this7._activeTransform;
+              activeTransform.x = constrainedPointerPosition.x - _this7._pickupPositionOnPage.x + _this7._passiveTransform.x;
+              activeTransform.y = constrainedPointerPosition.y - _this7._pickupPositionOnPage.y + _this7._passiveTransform.y;
 
-              _this9._applyRootElementTransform(activeTransform.x, activeTransform.y); // Apply transform as attribute if dragging and svg element to work for IE
+              _this7._applyRootElementTransform(activeTransform.x, activeTransform.y); // Apply transform as attribute if dragging and svg element to work for IE
 
 
-              if (typeof SVGElement !== 'undefined' && _this9._rootElement instanceof SVGElement) {
+              if (typeof SVGElement !== 'undefined' && _this7._rootElement instanceof SVGElement) {
                 var appliedTransform = "translate(".concat(activeTransform.x, " ").concat(activeTransform.y, ")");
 
-                _this9._rootElement.setAttribute('transform', appliedTransform);
+                _this7._rootElement.setAttribute('transform', appliedTransform);
               }
             } // Since this event gets fired for every pixel while dragging, we only
             // want to fire it if the consumer opted into it. Also we have to
             // re-enter the zone because we run all of the events on the outside.
 
 
-            if (_this9._moveEvents.observers.length) {
-              _this9._ngZone.run(function () {
-                _this9._moveEvents.next({
-                  source: _this9,
+            if (_this7._moveEvents.observers.length) {
+              _this7._ngZone.run(function () {
+                _this7._moveEvents.next({
+                  source: _this7,
                   pointerPosition: constrainedPointerPosition,
                   event: event,
-                  distance: _this9._getDragDistance(constrainedPointerPosition),
-                  delta: _this9._pointerDirectionDelta
+                  distance: _this7._getDragDistance(constrainedPointerPosition),
+                  delta: _this7._pointerDirectionDelta
                 });
               });
             }
@@ -2921,7 +2050,7 @@
 
 
           this._pointerUp = function (event) {
-            _this9._endDragSequence(event);
+            _this7._endDragSequence(event);
           };
 
           this.withRootElement(element);
@@ -2982,14 +2111,14 @@
         }, {
           key: "withHandles",
           value: function withHandles(handles) {
-            var _this10 = this;
+            var _this8 = this;
 
             this._handles = handles.map(function (handle) {
               return Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceElement"])(handle);
             });
 
             this._handles.forEach(function (handle) {
-              return toggleNativeDragInteractions(handle, _this10.disabled);
+              return toggleNativeDragInteractions(handle, _this8.disabled);
             });
 
             this._toggleNativeDragInteractions(); // Delete any lingering disabled handles that may have been destroyed. Note that we re-create
@@ -3001,7 +2130,7 @@
             var disabledHandles = new Set();
 
             this._disabledHandles.forEach(function (handle) {
-              if (_this10._handles.indexOf(handle) > -1) {
+              if (_this8._handles.indexOf(handle) > -1) {
                 disabledHandles.add(handle);
               }
             });
@@ -3040,7 +2169,7 @@
         }, {
           key: "withRootElement",
           value: function withRootElement(rootElement) {
-            var _this11 = this;
+            var _this9 = this;
 
             var element = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceElement"])(rootElement);
 
@@ -3050,8 +2179,8 @@
               }
 
               this._ngZone.runOutsideAngular(function () {
-                element.addEventListener('mousedown', _this11._pointerDown, activeEventListenerOptions);
-                element.addEventListener('touchstart', _this11._pointerDown, passiveEventListenerOptions);
+                element.addEventListener('mousedown', _this9._pointerDown, activeEventListenerOptions);
+                element.addEventListener('touchstart', _this9._pointerDown, passiveEventListenerOptions);
               });
 
               this._initialTransform = undefined;
@@ -3071,7 +2200,7 @@
         }, {
           key: "withBoundaryElement",
           value: function withBoundaryElement(boundaryElement) {
-            var _this12 = this;
+            var _this10 = this;
 
             this._boundaryElement = boundaryElement ? Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceElement"])(boundaryElement) : null;
 
@@ -3079,7 +2208,7 @@
 
             if (boundaryElement) {
               this._resizeSubscription = this._viewportRuler.change(10).subscribe(function () {
-                return _this12._containInsideBoundaryOnResize();
+                return _this10._containInsideBoundaryOnResize();
               });
             }
 
@@ -3291,7 +2420,7 @@
         }, {
           key: "_endDragSequence",
           value: function _endDragSequence(event) {
-            var _this13 = this;
+            var _this11 = this;
 
             // Note that here we use `isDragging` from the service, rather than from `this`.
             // The difference is that the one from the service reflects whether a dragging sequence
@@ -3324,11 +2453,11 @@
               this._dropContainer._stopScrolling();
 
               this._animatePreviewToPlaceholder().then(function () {
-                _this13._cleanupDragArtifacts(event);
+                _this11._cleanupDragArtifacts(event);
 
-                _this13._cleanupCachedDimensions();
+                _this11._cleanupCachedDimensions();
 
-                _this13._dragDropRegistry.stopDragging(_this13);
+                _this11._dragDropRegistry.stopDragging(_this11);
               });
             } else {
               // Convert the active transform into a passive one. This means that next time
@@ -3338,9 +2467,9 @@
               this._passiveTransform.y = this._activeTransform.y;
 
               this._ngZone.run(function () {
-                _this13.ended.next({
-                  source: _this13,
-                  distance: _this13._getDragDistance(_this13._getPointerPositionOnPage(event))
+                _this11.ended.next({
+                  source: _this11,
+                  distance: _this11._getDragDistance(_this11._getPointerPositionOnPage(event))
                 });
               });
 
@@ -3413,7 +2542,7 @@
         }, {
           key: "_initializeDragSequence",
           value: function _initializeDragSequence(referenceElement, event) {
-            var _this14 = this;
+            var _this12 = this;
 
             // Always stop propagation for the event that initializes
             // the dragging sequence, in order to prevent it from potentially
@@ -3455,7 +2584,7 @@
             this._pointerMoveSubscription = this._dragDropRegistry.pointerMove.subscribe(this._pointerMove);
             this._pointerUpSubscription = this._dragDropRegistry.pointerUp.subscribe(this._pointerUp);
             this._scrollSubscription = this._dragDropRegistry.scroll.subscribe(function (scrollEvent) {
-              _this14._updateOnScroll(scrollEvent);
+              _this12._updateOnScroll(scrollEvent);
             });
 
             if (this._boundaryElement) {
@@ -3490,7 +2619,7 @@
         }, {
           key: "_cleanupDragArtifacts",
           value: function _cleanupDragArtifacts(event) {
-            var _this15 = this;
+            var _this13 = this;
 
             // Restore the element's visibility and insert it at its old position in the DOM.
             // It's important that we maintain the position, because moving the element around in the DOM
@@ -3507,32 +2636,32 @@
             this._boundaryRect = this._previewRect = undefined; // Re-enter the NgZone since we bound `document` events on the outside.
 
             this._ngZone.run(function () {
-              var container = _this15._dropContainer;
-              var currentIndex = container.getItemIndex(_this15);
+              var container = _this13._dropContainer;
+              var currentIndex = container.getItemIndex(_this13);
 
-              var pointerPosition = _this15._getPointerPositionOnPage(event);
+              var pointerPosition = _this13._getPointerPositionOnPage(event);
 
-              var distance = _this15._getDragDistance(_this15._getPointerPositionOnPage(event));
+              var distance = _this13._getDragDistance(_this13._getPointerPositionOnPage(event));
 
               var isPointerOverContainer = container._isOverContainer(pointerPosition.x, pointerPosition.y);
 
-              _this15.ended.next({
-                source: _this15,
+              _this13.ended.next({
+                source: _this13,
                 distance: distance
               });
 
-              _this15.dropped.next({
-                item: _this15,
+              _this13.dropped.next({
+                item: _this13,
                 currentIndex: currentIndex,
-                previousIndex: _this15._initialIndex,
+                previousIndex: _this13._initialIndex,
                 container: container,
-                previousContainer: _this15._initialContainer,
+                previousContainer: _this13._initialContainer,
                 isPointerOverContainer: isPointerOverContainer,
                 distance: distance
               });
 
-              container.drop(_this15, currentIndex, _this15._initialIndex, _this15._initialContainer, isPointerOverContainer, distance);
-              _this15._dropContainer = _this15._initialContainer;
+              container.drop(_this13, currentIndex, _this13._initialIndex, _this13._initialContainer, isPointerOverContainer, distance);
+              _this13._dropContainer = _this13._initialContainer;
             });
           }
           /**
@@ -3543,7 +2672,7 @@
         }, {
           key: "_updateActiveDropContainer",
           value: function _updateActiveDropContainer(_ref, _ref2) {
-            var _this16 = this;
+            var _this14 = this;
 
             var x = _ref.x,
                 y = _ref.y;
@@ -3564,24 +2693,24 @@
             if (newContainer && newContainer !== this._dropContainer) {
               this._ngZone.run(function () {
                 // Notify the old container that the item has left.
-                _this16.exited.next({
-                  item: _this16,
-                  container: _this16._dropContainer
+                _this14.exited.next({
+                  item: _this14,
+                  container: _this14._dropContainer
                 });
 
-                _this16._dropContainer.exit(_this16); // Notify the new container that the item has entered.
+                _this14._dropContainer.exit(_this14); // Notify the new container that the item has entered.
 
 
-                _this16._dropContainer = newContainer;
+                _this14._dropContainer = newContainer;
 
-                _this16._dropContainer.enter(_this16, x, y, newContainer === _this16._initialContainer && // If we're re-entering the initial container and sorting is disabled,
+                _this14._dropContainer.enter(_this14, x, y, newContainer === _this14._initialContainer && // If we're re-entering the initial container and sorting is disabled,
                 // put item the into its starting index to begin with.
-                newContainer.sortingDisabled ? _this16._initialIndex : undefined);
+                newContainer.sortingDisabled ? _this14._initialIndex : undefined);
 
-                _this16.entered.next({
-                  item: _this16,
+                _this14.entered.next({
+                  item: _this14,
                   container: newContainer,
-                  currentIndex: newContainer.getItemIndex(_this16)
+                  currentIndex: newContainer.getItemIndex(_this14)
                 });
               });
             }
@@ -3660,7 +2789,7 @@
         }, {
           key: "_animatePreviewToPlaceholder",
           value: function _animatePreviewToPlaceholder() {
-            var _this17 = this;
+            var _this15 = this;
 
             // If the user hasn't moved yet, the transitionend event won't fire.
             if (!this._hasMoved) {
@@ -3687,8 +2816,8 @@
             return this._ngZone.runOutsideAngular(function () {
               return new Promise(function (resolve) {
                 var handler = function handler(event) {
-                  if (!event || event.target === _this17._preview && event.propertyName === 'transform') {
-                    _this17._preview.removeEventListener('transitionend', handler);
+                  if (!event || event.target === _this15._preview && event.propertyName === 'transform') {
+                    _this15._preview.removeEventListener('transitionend', handler);
 
                     resolve();
                     clearTimeout(timeout);
@@ -3700,7 +2829,7 @@
 
                 var timeout = setTimeout(handler, duration * 1.5);
 
-                _this17._preview.addEventListener('transitionend', handler);
+                _this15._preview.addEventListener('transitionend', handler);
               });
             });
           }
@@ -4252,7 +3381,7 @@
 
       var DropListRef = /*#__PURE__*/function () {
         function DropListRef(element, _dragDropRegistry, _document, _ngZone, _viewportRuler) {
-          var _this18 = this;
+          var _this16 = this;
 
           _classCallCheck(this, DropListRef);
 
@@ -4357,26 +3486,26 @@
           /** Starts the interval that'll auto-scroll the element. */
 
           this._startScrollInterval = function () {
-            _this18._stopScrolling();
+            _this16._stopScrolling();
 
-            Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["interval"])(0, rxjs__WEBPACK_IMPORTED_MODULE_5__["animationFrameScheduler"]).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(_this18._stopScrollTimers)).subscribe(function () {
-              var node = _this18._scrollNode;
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["interval"])(0, rxjs__WEBPACK_IMPORTED_MODULE_5__["animationFrameScheduler"]).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(_this16._stopScrollTimers)).subscribe(function () {
+              var node = _this16._scrollNode;
 
-              if (_this18._verticalScrollDirection === 1
+              if (_this16._verticalScrollDirection === 1
               /* UP */
               ) {
                   incrementVerticalScroll(node, -AUTO_SCROLL_STEP);
-                } else if (_this18._verticalScrollDirection === 2
+                } else if (_this16._verticalScrollDirection === 2
               /* DOWN */
               ) {
                   incrementVerticalScroll(node, AUTO_SCROLL_STEP);
                 }
 
-              if (_this18._horizontalScrollDirection === 1
+              if (_this16._horizontalScrollDirection === 1
               /* LEFT */
               ) {
                   incrementHorizontalScroll(node, -AUTO_SCROLL_STEP);
-                } else if (_this18._horizontalScrollDirection === 2
+                } else if (_this16._horizontalScrollDirection === 2
               /* RIGHT */
               ) {
                   incrementHorizontalScroll(node, AUTO_SCROLL_STEP);
@@ -4430,7 +3559,7 @@
         }, {
           key: "start",
           value: function start() {
-            var _this19 = this;
+            var _this17 = this;
 
             var styles = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceElement"])(this.element).style;
             this.beforeStarted.next();
@@ -4444,7 +3573,7 @@
             this._cacheItems();
 
             this._siblings.forEach(function (sibling) {
-              return sibling._startReceiving(_this19);
+              return sibling._startReceiving(_this17);
             });
 
             this._viewportScrollSubscription.unsubscribe();
@@ -4575,12 +3704,12 @@
         }, {
           key: "withItems",
           value: function withItems(items) {
-            var _this20 = this;
+            var _this18 = this;
 
             var previousItems = this._draggables;
             this._draggables = items;
             items.forEach(function (item) {
-              return item._withDropContainer(_this20);
+              return item._withDropContainer(_this18);
             });
 
             if (this.isDragging()) {
@@ -4771,7 +3900,7 @@
         }, {
           key: "_startScrollingIfNecessary",
           value: function _startScrollingIfNecessary(pointerX, pointerY) {
-            var _this21 = this;
+            var _this19 = this;
 
             if (this.autoScrollDisabled) {
               return;
@@ -4788,7 +3917,7 @@
             this._parentPositions.positions.forEach(function (position, element) {
               // We have special handling for the `document` below. Also this would be
               // nicer with a  for...of loop, but it requires changing a compiler flag.
-              if (element === _this21._document || !position.clientRect || scrollNode) {
+              if (element === _this19._document || !position.clientRect || scrollNode) {
                 return;
               }
 
@@ -4879,7 +4008,7 @@
         }, {
           key: "_reset",
           value: function _reset() {
-            var _this22 = this;
+            var _this20 = this;
 
             this._isDragging = false;
             var styles = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceElement"])(this.element).style;
@@ -4894,7 +4023,7 @@
             });
 
             this._siblings.forEach(function (sibling) {
-              return sibling._stopReceiving(_this22);
+              return sibling._stopReceiving(_this20);
             });
 
             this._activeDraggables = [];
@@ -4997,7 +4126,7 @@
         }, {
           key: "_getItemIndexFromPointerPosition",
           value: function _getItemIndexFromPointerPosition(item, pointerX, pointerY, delta) {
-            var _this23 = this;
+            var _this21 = this;
 
             var isHorizontal = this._orientation === 'horizontal';
             var index = findIndex(this._itemPositions, function (_ref4, _, array) {
@@ -5015,7 +4144,7 @@
                 // the item after we made the swap, and they didn't change the direction in which they're
                 // dragging, we don't consider it a direction swap.
 
-                if (drag === _this23._previousSwap.drag && _this23._previousSwap.overlaps && direction === _this23._previousSwap.delta) {
+                if (drag === _this21._previousSwap.drag && _this21._previousSwap.overlaps && direction === _this21._previousSwap.delta) {
                   return false;
                 }
               }
@@ -5132,36 +4261,36 @@
         }, {
           key: "_listenToScrollEvents",
           value: function _listenToScrollEvents() {
-            var _this24 = this;
+            var _this22 = this;
 
             this._viewportScrollSubscription = this._dragDropRegistry.scroll.subscribe(function (event) {
-              if (_this24.isDragging()) {
-                var scrollDifference = _this24._parentPositions.handleScroll(event);
+              if (_this22.isDragging()) {
+                var scrollDifference = _this22._parentPositions.handleScroll(event);
 
                 if (scrollDifference) {
                   // Since we know the amount that the user has scrolled we can shift all of the
                   // client rectangles ourselves. This is cheaper than re-measuring everything and
                   // we can avoid inconsistent behavior where we might be measuring the element before
                   // its position has changed.
-                  _this24._itemPositions.forEach(function (_ref5) {
+                  _this22._itemPositions.forEach(function (_ref5) {
                     var clientRect = _ref5.clientRect;
                     adjustClientRect(clientRect, scrollDifference.top, scrollDifference.left);
                   }); // We need two loops for this, because we want all of the cached
                   // positions to be up-to-date before we re-sort the item.
 
 
-                  _this24._itemPositions.forEach(function (_ref6) {
+                  _this22._itemPositions.forEach(function (_ref6) {
                     var drag = _ref6.drag;
 
-                    if (_this24._dragDropRegistry.isDragging(drag)) {
+                    if (_this22._dragDropRegistry.isDragging(drag)) {
                       // We need to re-sort the item manually, because the pointer move
                       // events won't be dispatched while the user is scrolling.
                       drag._sortFromLastPointerPosition();
                     }
                   });
                 }
-              } else if (_this24.isReceiving()) {
-                _this24._cacheParentPositions();
+              } else if (_this22.isReceiving()) {
+                _this22._cacheParentPositions();
               }
             });
           }
@@ -5374,7 +4503,7 @@
 
       var DragDropRegistry = /*#__PURE__*/function () {
         function DragDropRegistry(_ngZone, _document) {
-          var _this25 = this;
+          var _this23 = this;
 
           _classCallCheck(this, DragDropRegistry);
 
@@ -5412,7 +4541,7 @@
            */
 
           this._preventDefaultWhileDragging = function (event) {
-            if (_this25._activeDragInstances.size) {
+            if (_this23._activeDragInstances.size) {
               event.preventDefault();
             }
           };
@@ -5420,10 +4549,10 @@
 
 
           this._persistentTouchmoveListener = function (event) {
-            if (_this25._activeDragInstances.size) {
+            if (_this23._activeDragInstances.size) {
               event.preventDefault();
 
-              _this25.pointerMove.next(event);
+              _this23.pointerMove.next(event);
             }
           };
 
@@ -5444,7 +4573,7 @@
         }, {
           key: "registerDragItem",
           value: function registerDragItem(drag) {
-            var _this26 = this;
+            var _this24 = this;
 
             this._dragInstances.add(drag); // The `touchmove` event gets bound once, ahead of time, because WebKit
             // won't preventDefault on a dynamically-added `touchmove` listener.
@@ -5455,7 +4584,7 @@
               this._ngZone.runOutsideAngular(function () {
                 // The event handler has to be explicitly active,
                 // because newer browsers make it passive by default.
-                _this26._document.addEventListener('touchmove', _this26._persistentTouchmoveListener, activeCapturingEventOptions);
+                _this24._document.addEventListener('touchmove', _this24._persistentTouchmoveListener, activeCapturingEventOptions);
               });
             }
           }
@@ -5488,7 +4617,7 @@
         }, {
           key: "startDragging",
           value: function startDragging(drag, event) {
-            var _this27 = this;
+            var _this25 = this;
 
             // Do not process the same drag twice to avoid memory leaks and redundant listeners
             if (this._activeDragInstances.has(drag)) {
@@ -5505,12 +4634,12 @@
 
               this._globalListeners.set(_isTouchEvent ? 'touchend' : 'mouseup', {
                 handler: function handler(e) {
-                  return _this27.pointerUp.next(e);
+                  return _this25.pointerUp.next(e);
                 },
                 options: true
               }).set('scroll', {
                 handler: function handler(e) {
-                  return _this27.scroll.next(e);
+                  return _this25.scroll.next(e);
                 },
                 // Use capturing so that we pick up scroll changes in any scrollable nodes that aren't
                 // the document. See https://github.com/angular/components/issues/17144.
@@ -5529,15 +4658,15 @@
               if (!_isTouchEvent) {
                 this._globalListeners.set('mousemove', {
                   handler: function handler(e) {
-                    return _this27.pointerMove.next(e);
+                    return _this25.pointerMove.next(e);
                   },
                   options: activeCapturingEventOptions
                 });
               }
 
               this._ngZone.runOutsideAngular(function () {
-                _this27._globalListeners.forEach(function (config, name) {
-                  _this27._document.addEventListener(name, config.handler, config.options);
+                _this25._globalListeners.forEach(function (config, name) {
+                  _this25._document.addEventListener(name, config.handler, config.options);
                 });
               });
             }
@@ -5563,14 +4692,14 @@
         }, {
           key: "ngOnDestroy",
           value: function ngOnDestroy() {
-            var _this28 = this;
+            var _this26 = this;
 
             this._dragInstances.forEach(function (instance) {
-              return _this28.removeDragItem(instance);
+              return _this26.removeDragItem(instance);
             });
 
             this._dropInstances.forEach(function (instance) {
-              return _this28.removeDropContainer(instance);
+              return _this26.removeDropContainer(instance);
             });
 
             this._clearGlobalListeners();
@@ -5583,10 +4712,10 @@
         }, {
           key: "_clearGlobalListeners",
           value: function _clearGlobalListeners() {
-            var _this29 = this;
+            var _this27 = this;
 
             this._globalListeners.forEach(function (config, name) {
-              _this29._document.removeEventListener(name, config.handler, config.options);
+              _this27._document.removeEventListener(name, config.handler, config.options);
             });
 
             this._globalListeners.clear();
@@ -5928,7 +5057,7 @@
         function CdkDropList(
         /** Element that the drop list is attached to. */
         element, dragDrop, _changeDetectorRef, _scrollDispatcher, _dir, _group, config) {
-          var _this30 = this;
+          var _this28 = this;
 
           _classCallCheck(this, CdkDropList);
 
@@ -6007,11 +5136,11 @@
           }
 
           this._dropListRef.enterPredicate = function (drag, drop) {
-            return _this30.enterPredicate(drag.data, drop.data);
+            return _this28.enterPredicate(drag.data, drop.data);
           };
 
           this._dropListRef.sortPredicate = function (index, drag, drop) {
-            return _this30.sortPredicate(index, drag.data, drop.data);
+            return _this28.sortPredicate(index, drag.data, drop.data);
           };
 
           this._setupInputSyncSubscription(this._dropListRef);
@@ -6101,7 +5230,7 @@
         }, {
           key: "_setupInputSyncSubscription",
           value: function _setupInputSyncSubscription(ref) {
-            var _this31 = this;
+            var _this29 = this;
 
             if (this._dir) {
               this._dir.change.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["startWith"])(this._dir.value), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this._destroyed)).subscribe(function (value) {
@@ -6110,7 +5239,7 @@
             }
 
             ref.beforeStarted.subscribe(function () {
-              var siblings = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceArray"])(_this31.connectedTo).map(function (drop) {
+              var siblings = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceArray"])(_this29.connectedTo).map(function (drop) {
                 if (typeof drop === 'string') {
                   var correspondingDropList = CdkDropList._dropLists.find(function (list) {
                     return list.id === drop;
@@ -6126,8 +5255,8 @@
                 return drop;
               });
 
-              if (_this31._group) {
-                _this31._group._items.forEach(function (drop) {
+              if (_this29._group) {
+                _this29._group._items.forEach(function (drop) {
                   if (siblings.indexOf(drop) === -1) {
                     siblings.push(drop);
                   }
@@ -6136,27 +5265,27 @@
               // as long as possible, ensuring that the element is in its final place in the DOM.
 
 
-              if (!_this31._scrollableParentsResolved) {
-                var scrollableParents = _this31._scrollDispatcher.getAncestorScrollContainers(_this31.element).map(function (scrollable) {
+              if (!_this29._scrollableParentsResolved) {
+                var scrollableParents = _this29._scrollDispatcher.getAncestorScrollContainers(_this29.element).map(function (scrollable) {
                   return scrollable.getElementRef().nativeElement;
                 });
 
-                _this31._dropListRef.withScrollableParents(scrollableParents); // Only do this once since it involves traversing the DOM and the parents
+                _this29._dropListRef.withScrollableParents(scrollableParents); // Only do this once since it involves traversing the DOM and the parents
                 // shouldn't be able to change without the drop list being destroyed.
 
 
-                _this31._scrollableParentsResolved = true;
+                _this29._scrollableParentsResolved = true;
               }
 
-              ref.disabled = _this31.disabled;
-              ref.lockAxis = _this31.lockAxis;
-              ref.sortingDisabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(_this31.sortingDisabled);
-              ref.autoScrollDisabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(_this31.autoScrollDisabled);
+              ref.disabled = _this29.disabled;
+              ref.lockAxis = _this29.lockAxis;
+              ref.sortingDisabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(_this29.sortingDisabled);
+              ref.autoScrollDisabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(_this29.autoScrollDisabled);
               ref.connectedTo(siblings.filter(function (drop) {
-                return drop && drop !== _this31;
+                return drop && drop !== _this29;
               }).map(function (list) {
                 return list._dropListRef;
-              })).withOrientation(_this31.orientation);
+              })).withOrientation(_this29.orientation);
             });
           }
           /** Handles events from the underlying DropListRef. */
@@ -6164,38 +5293,38 @@
         }, {
           key: "_handleEvents",
           value: function _handleEvents(ref) {
-            var _this32 = this;
+            var _this30 = this;
 
             ref.beforeStarted.subscribe(function () {
-              _this32._syncItemsWithRef();
+              _this30._syncItemsWithRef();
 
-              _this32._changeDetectorRef.markForCheck();
+              _this30._changeDetectorRef.markForCheck();
             });
             ref.entered.subscribe(function (event) {
-              _this32.entered.emit({
-                container: _this32,
+              _this30.entered.emit({
+                container: _this30,
                 item: event.item.data,
                 currentIndex: event.currentIndex
               });
             });
             ref.exited.subscribe(function (event) {
-              _this32.exited.emit({
-                container: _this32,
+              _this30.exited.emit({
+                container: _this30,
                 item: event.item.data
               });
 
-              _this32._changeDetectorRef.markForCheck();
+              _this30._changeDetectorRef.markForCheck();
             });
             ref.sorted.subscribe(function (event) {
-              _this32.sorted.emit({
+              _this30.sorted.emit({
                 previousIndex: event.previousIndex,
                 currentIndex: event.currentIndex,
-                container: _this32,
+                container: _this30,
                 item: event.item.data
               });
             });
             ref.dropped.subscribe(function (event) {
-              _this32.dropped.emit({
+              _this30.dropped.emit({
                 previousIndex: event.previousIndex,
                 currentIndex: event.currentIndex,
                 previousContainer: event.previousContainer.data,
@@ -6207,7 +5336,7 @@
               // detection and we're not guaranteed for something else to have triggered it.
 
 
-              _this32._changeDetectorRef.markForCheck();
+              _this30._changeDetectorRef.markForCheck();
             });
           }
           /** Assigns the default input values based on a provided config object. */
@@ -6828,7 +5957,7 @@
          * @breaking-change 12.0.0
          */
         _document, _ngZone, _viewContainerRef, config, _dir, dragDrop, _changeDetectorRef, _selfHandle) {
-          var _this33 = this;
+          var _this31 = this;
 
           _classCallCheck(this, CdkDrag);
 
@@ -6864,9 +5993,9 @@
            */
 
           this.moved = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"](function (observer) {
-            var subscription = _this33._dragRef.moved.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (movedEvent) {
+            var subscription = _this31._dragRef.moved.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (movedEvent) {
               return {
-                source: _this33,
+                source: _this31,
                 pointerPosition: movedEvent.pointerPosition,
                 event: movedEvent.event,
                 delta: movedEvent.delta,
@@ -6954,45 +6083,45 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this34 = this;
+            var _this32 = this;
 
             // We need to wait for the zone to stabilize, in order for the reference
             // element to be in the proper place in the DOM. This is mostly relevant
             // for draggable elements inside portals since they get stamped out in
             // their original DOM position and then they get transferred to the portal.
             this._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this._destroyed)).subscribe(function () {
-              _this34._updateRootElement(); // Listen for any newly-added handles.
+              _this32._updateRootElement(); // Listen for any newly-added handles.
 
 
-              _this34._handles.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["startWith"])(_this34._handles), // Sync the new handles with the DragRef.
+              _this32._handles.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["startWith"])(_this32._handles), // Sync the new handles with the DragRef.
               Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(function (handles) {
                 var childHandleElements = handles.filter(function (handle) {
-                  return handle._parentDrag === _this34;
+                  return handle._parentDrag === _this32;
                 }).map(function (handle) {
                   return handle.element;
                 }); // Usually handles are only allowed to be a descendant of the drag element, but if
                 // the consumer defined a different drag root, we should allow the drag element
                 // itself to be a handle too.
 
-                if (_this34._selfHandle && _this34.rootElementSelector) {
-                  childHandleElements.push(_this34.element);
+                if (_this32._selfHandle && _this32.rootElementSelector) {
+                  childHandleElements.push(_this32.element);
                 }
 
-                _this34._dragRef.withHandles(childHandleElements);
+                _this32._dragRef.withHandles(childHandleElements);
               }), // Listen if the state of any of the handles changes.
               Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (handles) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["merge"]).apply(void 0, _toConsumableArray(handles.map(function (item) {
                   return item._stateChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["startWith"])(item));
                 })));
-              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(_this34._destroyed)).subscribe(function (handleInstance) {
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(_this32._destroyed)).subscribe(function (handleInstance) {
                 // Enabled/disable the handle that changed in the DragRef.
-                var dragRef = _this34._dragRef;
+                var dragRef = _this32._dragRef;
                 var handle = handleInstance.element.nativeElement;
                 handleInstance.disabled ? dragRef.disableHandle(handle) : dragRef.enableHandle(handle);
               });
 
-              if (_this34.freeDragPosition) {
-                _this34._dragRef.setFreeDragPosition(_this34.freeDragPosition);
+              if (_this32.freeDragPosition) {
+                _this32._dragRef.setFreeDragPosition(_this32.freeDragPosition);
               }
             });
           }
@@ -7067,29 +6196,29 @@
         }, {
           key: "_syncInputs",
           value: function _syncInputs(ref) {
-            var _this35 = this;
+            var _this33 = this;
 
             ref.beforeStarted.subscribe(function () {
               if (!ref.isDragging()) {
-                var dir = _this35._dir;
-                var dragStartDelay = _this35.dragStartDelay;
-                var placeholder = _this35._placeholderTemplate ? {
-                  template: _this35._placeholderTemplate.templateRef,
-                  context: _this35._placeholderTemplate.data,
-                  viewContainer: _this35._viewContainerRef
+                var dir = _this33._dir;
+                var dragStartDelay = _this33.dragStartDelay;
+                var placeholder = _this33._placeholderTemplate ? {
+                  template: _this33._placeholderTemplate.templateRef,
+                  context: _this33._placeholderTemplate.data,
+                  viewContainer: _this33._viewContainerRef
                 } : null;
-                var preview = _this35._previewTemplate ? {
-                  template: _this35._previewTemplate.templateRef,
-                  context: _this35._previewTemplate.data,
-                  matchSize: _this35._previewTemplate.matchSize,
-                  viewContainer: _this35._viewContainerRef
+                var preview = _this33._previewTemplate ? {
+                  template: _this33._previewTemplate.templateRef,
+                  context: _this33._previewTemplate.data,
+                  matchSize: _this33._previewTemplate.matchSize,
+                  viewContainer: _this33._viewContainerRef
                 } : null;
-                ref.disabled = _this35.disabled;
-                ref.lockAxis = _this35.lockAxis;
+                ref.disabled = _this33.disabled;
+                ref.lockAxis = _this33.lockAxis;
                 ref.dragStartDelay = typeof dragStartDelay === 'object' && dragStartDelay ? dragStartDelay : Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceNumberProperty"])(dragStartDelay);
-                ref.constrainPosition = _this35.constrainPosition;
-                ref.previewClass = _this35.previewClass;
-                ref.withBoundaryElement(_this35._getBoundaryElement()).withPlaceholderTemplate(placeholder).withPreviewTemplate(preview);
+                ref.constrainPosition = _this33.constrainPosition;
+                ref.previewClass = _this33.previewClass;
+                ref.withBoundaryElement(_this33._getBoundaryElement()).withPlaceholderTemplate(placeholder).withPreviewTemplate(preview);
 
                 if (dir) {
                   ref.withDirection(dir.value);
@@ -7102,53 +6231,53 @@
         }, {
           key: "_handleEvents",
           value: function _handleEvents(ref) {
-            var _this36 = this;
+            var _this34 = this;
 
             ref.started.subscribe(function () {
-              _this36.started.emit({
-                source: _this36
+              _this34.started.emit({
+                source: _this34
               }); // Since all of these events run outside of change detection,
               // we need to ensure that everything is marked correctly.
 
 
-              _this36._changeDetectorRef.markForCheck();
+              _this34._changeDetectorRef.markForCheck();
             });
             ref.released.subscribe(function () {
-              _this36.released.emit({
-                source: _this36
+              _this34.released.emit({
+                source: _this34
               });
             });
             ref.ended.subscribe(function (event) {
-              _this36.ended.emit({
-                source: _this36,
+              _this34.ended.emit({
+                source: _this34,
                 distance: event.distance
               }); // Since all of these events run outside of change detection,
               // we need to ensure that everything is marked correctly.
 
 
-              _this36._changeDetectorRef.markForCheck();
+              _this34._changeDetectorRef.markForCheck();
             });
             ref.entered.subscribe(function (event) {
-              _this36.entered.emit({
+              _this34.entered.emit({
                 container: event.container.data,
-                item: _this36,
+                item: _this34,
                 currentIndex: event.currentIndex
               });
             });
             ref.exited.subscribe(function (event) {
-              _this36.exited.emit({
+              _this34.exited.emit({
                 container: event.container.data,
-                item: _this36
+                item: _this34
               });
             });
             ref.dropped.subscribe(function (event) {
-              _this36.dropped.emit({
+              _this34.dropped.emit({
                 previousIndex: event.previousIndex,
                 currentIndex: event.currentIndex,
                 previousContainer: event.previousContainer.data,
                 container: event.container.data,
                 isPointerOverContainer: event.isPointerOverContainer,
-                item: _this36,
+                item: _this34,
                 distance: event.distance
               });
             });
@@ -7659,13 +6788,13 @@
         _createClass(ClientSocketService, [{
           key: "checkStatus",
           value: function checkStatus() {
-            var _this37 = this;
+            var _this35 = this;
 
             this.socket.on('connect', function () {
-              _this37.socketStatus = true;
+              _this35.socketStatus = true;
             });
             this.socket.on('disconnect', function () {
-              _this37.socketStatus = false;
+              _this35.socketStatus = false;
             });
           }
         }, {
@@ -8758,20 +7887,20 @@
         _createClass(GenerarPedidoFacadeService, [{
           key: "MostrarTipoPedidos",
           value: function MostrarTipoPedidos(params) {
-            var _this38 = this;
+            var _this36 = this;
 
             this.Cargando$.next(true);
             this.TipoPedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/tipoPedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this38.Cargando$.next(false);
+              _this36.Cargando$.next(false);
 
-              _this38.TipoPedidos$.next(result.data.Table0);
+              _this36.TipoPedidos$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this38.Cargando$.next(false);
+              _this36.Cargando$.next(false);
 
-              _this38.TipoPedidos$.next([]);
+              _this36.TipoPedidos$.next([]);
 
-              _this38._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los tipos de pedidos', '');
+              _this36._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los tipos de pedidos', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8780,20 +7909,20 @@
         }, {
           key: "MostrarMetodosPago",
           value: function MostrarMetodosPago(params) {
-            var _this39 = this;
+            var _this37 = this;
 
             this.Cargando$.next(true);
             this.MetodosPago$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/metodoPago/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this39.Cargando$.next(false);
+              _this37.Cargando$.next(false);
 
-              _this39.MetodosPago$.next(result.data.Table0);
+              _this37.MetodosPago$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this39.Cargando$.next(false);
+              _this37.Cargando$.next(false);
 
-              _this39.MetodosPago$.next([]);
+              _this37.MetodosPago$.next([]);
 
-              _this39._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los metodos de pago', '');
+              _this37._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los metodos de pago', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8802,15 +7931,15 @@
         }, {
           key: "InsertarPedido",
           value: function InsertarPedido(params, respuesta) {
-            var _this40 = this;
+            var _this38 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PostDataApi("pedido/pedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this40.Cargando$.next(false);
+              _this38.Cargando$.next(false);
 
-              _this40._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al ingresar el pedido', '');
+              _this38._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al ingresar el pedido', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8819,15 +7948,15 @@
         }, {
           key: "InsertarArchivoAdjunto",
           value: function InsertarArchivoAdjunto(params, respuesta) {
-            var _this41 = this;
+            var _this39 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PostDataApi("mantenimiento/adjunto/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this41.Cargando$.next(false);
+              _this39.Cargando$.next(false);
 
-              _this41._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el adjunto', '');
+              _this39._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al insertar el adjunto', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8836,15 +7965,15 @@
         }, {
           key: "cargarArchivo",
           value: function cargarArchivo(params, respuesta) {
-            var _this42 = this;
+            var _this40 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PostDataApi("adjuntos/cargarArchivos/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this42.Cargando$.next(false);
+              _this40.Cargando$.next(false);
 
-              _this42._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al cargar el archivo', '');
+              _this40._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al cargar el archivo', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8960,20 +8089,20 @@
         _createClass(SeguimientoPedidoFacadeService, [{
           key: "MostrarSeguimientoPedidos",
           value: function MostrarSeguimientoPedidos(params) {
-            var _this43 = this;
+            var _this41 = this;
 
             this.Cargando$.next(true);
             this.Pedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("pedido/pedidoSeguimiento", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this43.Cargando$.next(false);
+              _this41.Cargando$.next(false);
 
-              _this43.Pedidos$.next(result.data);
+              _this41.Pedidos$.next(result.data);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this43.Cargando$.next(false);
+              _this41.Cargando$.next(false);
 
-              _this43.Pedidos$.next([]);
+              _this41.Pedidos$.next([]);
 
-              _this43._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
+              _this41._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -8982,20 +8111,20 @@
         }, {
           key: "MostrarEstadosProceso",
           value: function MostrarEstadosProceso(params) {
-            var _this44 = this;
+            var _this42 = this;
 
             this.Cargando$.next(true);
             this.Pedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/mostrarEstadoProceso", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this44.Cargando$.next(false);
+              _this42.Cargando$.next(false);
 
-              _this44.EstadoProceso$.next(result.data.Table0);
+              _this42.EstadoProceso$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this44.Cargando$.next(false);
+              _this42.Cargando$.next(false);
 
-              _this44.Pedidos$.next([]);
+              _this42.Pedidos$.next([]);
 
-              _this44._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
+              _this42._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -9004,15 +8133,15 @@
         }, {
           key: "ActualizarPedido",
           value: function ActualizarPedido(params, respuesta) {
-            var _this45 = this;
+            var _this43 = this;
 
             this.Cargando$.next(true);
             var request$ = this.dataApi.PutDataApi("pedido/pedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this45.Cargando$.next(false);
+              _this43.Cargando$.next(false);
 
-              _this45._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el pedido', '');
+              _this43._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el pedido', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -9021,20 +8150,20 @@
         }, {
           key: "ActualizarEstadoPedidos",
           value: function ActualizarEstadoPedidos(params, callback) {
-            var _this46 = this;
+            var _this44 = this;
 
             this.Cargando$.next(true);
             this.Pedidos$.next([]);
             var request$ = this.dataApi.PutDataApi("pedido/pedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this46.Cargando$.next(false);
+              _this44.Cargando$.next(false);
 
               callback(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this46.Cargando$.next(false);
+              _this44.Cargando$.next(false);
 
-              _this46.Pedidos$.next([]);
+              _this44.Pedidos$.next([]);
 
-              _this46._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar los pedidos', '');
+              _this44._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar los pedidos', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -9043,20 +8172,20 @@
         }, {
           key: "MostrarReparto",
           value: function MostrarReparto(params) {
-            var _this47 = this;
+            var _this45 = this;
 
             this.Cargando$.next(true);
             this.Reparto$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/reparto/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this47.Cargando$.next(false);
+              _this45.Cargando$.next(false);
 
-              _this47.Reparto$.next(result.data.Table0);
+              _this45.Reparto$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this47.Cargando$.next(false);
+              _this45.Cargando$.next(false);
 
-              _this47.Reparto$.next([]);
+              _this45.Reparto$.next([]);
 
-              _this47._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar el reparto', '');
+              _this45._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar el reparto', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));
@@ -9381,7 +8510,8 @@
             IdUsuario: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null),
             DetallePedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]),
             Observacion: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
-            usuario: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('')
+            usuario: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
+            idEstado: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](1)
           });
         }
 
@@ -9391,7 +8521,7 @@
         }, {
           key: "enviarPedido",
           value: function enviarPedido() {
-            var _this48 = this;
+            var _this46 = this;
 
             if (this.pedidosForm.invalid) {
               this.pedidosForm.markAllAsTouched();
@@ -9403,41 +8533,41 @@
             this.formData = new FormData();
             this.generarPedidoFacade.InsertarPedido(this.pedidosForm.value, function (respuestaPedido) {
               if (respuestaPedido.hasError === false) {
-                if (_this48.pagoRealizado.value == true) {
-                  if (_this48.pedidosForm.invalid) {
-                    _this48.toast.mensajeWarning('', 'Es requerido cargar el voucher de pago');
+                if (_this46.pagoRealizado.value == true) {
+                  if (_this46.pedidosForm.invalid) {
+                    _this46.toast.mensajeWarning('', 'Es requerido cargar el voucher de pago');
 
                     return;
                   }
 
                   ;
 
-                  _this48.formData.append("archivo", _this48.fileForm.value);
+                  _this46.formData.append("archivo", _this46.fileForm.value);
 
-                  _this48.generarPedidoFacade.cargarArchivo(_this48.formData, function (respuestaArchivo) {
+                  _this46.generarPedidoFacade.cargarArchivo(_this46.formData, function (respuestaArchivo) {
                     if (respuestaArchivo.hasError === false) {
-                      _this48.formAdjunto = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
+                      _this46.formAdjunto = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
                         id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](0),
                         idPedido: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaPedido.data.Table0[0].Id),
-                        nombreAdjunto: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this48.nombreArchivo || ''),
+                        nombreAdjunto: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo || ''),
                         url: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](respuestaArchivo.data.url),
-                        extension: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this48.nombreArchivo.substring(_this48.nombreArchivo.indexOf('.'), _this48.nombreArchivo.length)),
+                        extension: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](_this46.nombreArchivo.substring(_this46.nombreArchivo.indexOf('.'), _this46.nombreArchivo.length)),
                         idEstado: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null)
                       });
 
-                      _this48.generarPedidoFacade.InsertarArchivoAdjunto(_this48.formAdjunto.value, function (respuestAdjunto) {
+                      _this46.generarPedidoFacade.InsertarArchivoAdjunto(_this46.formAdjunto.value, function (respuestAdjunto) {
                         if (respuestAdjunto.hasError === false) {
-                          _this48.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+                          _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
 
-                          _this48.router.navigateByUrl('cliente/listadoPedido');
+                          _this46.router.navigateByUrl('cliente/listadoPedido');
                         }
                       });
                     }
                   });
                 } else {
-                  _this48.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
+                  _this46.toast.mensajeSuccess('', 'Su pedido fue generado con exito');
 
-                  _this48.router.navigateByUrl('cliente/listadoPedido');
+                  _this46.router.navigateByUrl('cliente/listadoPedido');
                 }
               }
             });
@@ -9445,7 +8575,7 @@
         }, {
           key: "onFileSelect",
           value: function onFileSelect(event) {
-            var _this49 = this;
+            var _this47 = this;
 
             if (event.target.files.length > 0) {
               var file = event.target.files[0];
@@ -9472,23 +8602,23 @@
               reader.onload = function (e) {
                 var image = new Image();
                 image.src = e.target.result;
-                _this49.foto = image.src;
+                _this47.foto = image.src;
 
                 image.onload = function (rs) {
                   var img_height = rs.currentTarget["height"];
                   var img_width = rs.currentTarget["width"];
 
                   if (img_height > max_height && img_width > max_width) {
-                    _this49.imageError = "Maximum dimentions allowed " + max_height + "*" + max_width + "px";
+                    _this47.imageError = "Maximum dimentions allowed " + max_height + "*" + max_width + "px";
                     return false;
                   } else {
                     var imgBase64Path = e.target.result;
-                    _this49.cardImageBase64 = imgBase64Path;
-                    _this49.isImageSaved = true;
-                    _this49.selectFile = imgBase64Path;
+                    _this47.cardImageBase64 = imgBase64Path;
+                    _this47.isImageSaved = true;
+                    _this47.selectFile = imgBase64Path;
                   }
 
-                  return _this49.selectFile;
+                  return _this47.selectFile;
                 };
               };
 
@@ -10288,9 +9418,9 @@
 
       function SeguimientoPedidosComponent_ng_template_28_div_56_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 60);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 59);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 60);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -10474,9 +9604,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 55);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 52);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "button", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "button", 55);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SeguimientoPedidosComponent_ng_template_28_Template_button_click_52_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r35);
@@ -10498,11 +9628,11 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, SeguimientoPedidosComponent_ng_template_28_div_56_Template, 2, 1, "div", 57);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, SeguimientoPedidosComponent_ng_template_28_div_56_Template, 2, 1, "div", 56);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div", 57);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "button", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "button", 58);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, "Salir");
 
@@ -10584,7 +9714,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "textarea", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "textarea", 61);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -10600,7 +9730,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "textarea", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "textarea", 61);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -10608,15 +9738,15 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 57);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 58);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Salir");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 55);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SeguimientoPedidosComponent_ng_template_30_Template_button_click_21_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r37);
@@ -10650,7 +9780,7 @@
 
       function SeguimientoPedidosComponent_ng_template_32_mat_option_12_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 66);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 65);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -10696,7 +9826,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 49);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-form-field", 63);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-form-field", 62);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "mat-label");
 
@@ -10704,9 +9834,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-select", 64);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-select", 63);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, SeguimientoPedidosComponent_ng_template_32_mat_option_12_Template, 2, 2, "mat-option", 65);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, SeguimientoPedidosComponent_ng_template_32_mat_option_12_Template, 2, 2, "mat-option", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](13, "async");
 
@@ -10722,15 +9852,15 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 57);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 58);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Salir");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 55);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SeguimientoPedidosComponent_ng_template_32_Template_button_click_19_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r41);
@@ -10768,7 +9898,7 @@
 
       var SeguimientoPedidosComponent = /*#__PURE__*/function () {
         function SeguimientoPedidosComponent(seguiminetoPedidos, _bottomSheet, document, clienteSocket, toast, dialog) {
-          var _this50 = this;
+          var _this48 = this;
 
           _classCallCheck(this, SeguimientoPedidosComponent);
 
@@ -10791,7 +9921,7 @@
           this.seguiminetoPedidos.MostrarSeguimientoPedidos("");
           this.seguiminetoPedidos.MostrarEstadosProceso("");
           this.clienteSocket.listen("pedido").subscribe(function (result) {
-            _this50.notificarPedido(result);
+            _this48.notificarPedido(result);
           });
         }
 
@@ -10819,7 +9949,7 @@
         }, {
           key: "cambiarEstado",
           value: function cambiarEstado(params) {
-            var _this51 = this;
+            var _this49 = this;
 
             if (this.pedido.IdEstado === params.id) {
               this.toast.mensajeWarning('', 'El pedido ya se encuenta en estado' + "".concat(this.pedido.EstadoProceso));
@@ -10832,9 +9962,9 @@
                 this.openModalRepartidor();
               } else {
                 this.seguiminetoPedidos.ActualizarEstadoPedidos(this.pedido, function (result) {
-                  _this51.seguiminetoPedidos.MostrarSeguimientoPedidos("");
+                  _this49.seguiminetoPedidos.MostrarSeguimientoPedidos("");
 
-                  _this51._bottomSheet.dismiss();
+                  _this49._bottomSheet.dismiss();
                 });
               }
             }
@@ -10913,7 +10043,7 @@
         }, {
           key: "actualizarPedido",
           value: function actualizarPedido() {
-            var _this52 = this;
+            var _this50 = this;
 
             if (this.observacion.invalid) {
               this.toast.mensajeWarning("", "Es requerido ingresar la observación");
@@ -10923,11 +10053,11 @@
             this.pedido.DetallePedido = this.detallePedido.value;
             this.pedido.Observacion = this.observacion.value;
             this.seguiminetoPedidos.ActualizarEstadoPedidos(this.pedido, function (result) {
-              _this52.seguiminetoPedidos.MostrarSeguimientoPedidos("");
+              _this50.seguiminetoPedidos.MostrarSeguimientoPedidos("");
 
-              _this52._bottomSheet.dismiss();
+              _this50._bottomSheet.dismiss();
 
-              _this52.dialog.closeAll();
+              _this50.dialog.closeAll();
             });
           }
         }, {
@@ -10936,7 +10066,8 @@
             this.idReparto.setValue('');
             this.seguiminetoPedidos.MostrarReparto('0');
             var dialog = this.dialog.open(this.modalRepartidor, {
-              width: "40%",
+              width: "80vw",
+              height: "80vh",
               panelClass: "app-full-bleed-dialog"
             });
 
@@ -10945,7 +10076,7 @@
         }, {
           key: "actualizarRepartidor",
           value: function actualizarRepartidor() {
-            var _this53 = this;
+            var _this51 = this;
 
             if (this.idReparto.invalid) {
               this.toast.mensajeWarning('', 'Es requerido seleccionar un repartidor');
@@ -10956,11 +10087,11 @@
             this.pedido.IdReparto = this.idReparto.value;
             this.seguiminetoPedidos.ActualizarEstadoPedidos(this.pedido, function (result) {
               if (result.hasError === false) {
-                _this53.seguiminetoPedidos.MostrarSeguimientoPedidos("");
+                _this51.seguiminetoPedidos.MostrarSeguimientoPedidos("");
 
-                _this53._bottomSheet.dismiss();
+                _this51._bottomSheet.dismiss();
 
-                _this53.dialog.closeAll();
+                _this51.dialog.closeAll();
               }
             });
           }
@@ -10997,7 +10128,7 @@
         },
         decls: 34,
         vars: 13,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], [2, "margin-right", "5px"], ["mat-mini-fab", "", "class", "buttonSecundary", 3, "click", 4, "ngIf"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], ["class", "tarjetaSeguimiento  mt-2", 4, "ngIf"], ["Estados", ""], ["DetallePedido", ""], ["modalActualizarPedido", ""], ["modalReparto", ""], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], [3, "data"], [1, "tarjetaSeguimiento", "mt-2"], [1, "seguimiento"], [1, "tableFixHead"], ["role", "table", "id", "table", 1, "table"], [1, "text-center"], ["class", "text-center", "style", "width: 20%;", 4, "ngFor", "ngForOf"], ["id", "tableBodyActivos"], ["class", "columna text-center", "style", "width: 20%;", 4, "ngFor", "ngForOf"], [1, "text-center", 2, "width", "20%"], [1, "columna", "text-center", 2, "width", "20%"], ["class", "tarjeta col-md-12 mt-2", 4, "ngFor", "ngForOf"], [1, "tarjeta", "col-md-12", "mt-2"], [2, "float", "right", "z-index", "1", "margin-right", "5px"], ["mat-mini-fab", "", 1, "buttonView", 3, "click"], [2, "padding", "5px !important"], [2, "letter-spacing", "-0.025em !important", "line-height", "2rem !important", "font-weight", "600 !important", "text-align", "left"], [2, "letter-spacing", "-0.025em !important", "font-weight", "500 !important", "color", "rgba(100, 116, 139, 1)", "text-align", "justify", "overflow", "scroll", "max-height", "320px"], [2, "padding", "5px"], [1, "text-left", 2, "display", "flex", "align-items", "center", "font-size", "12px"], ["mat-list-item", "", 3, "click"], ["mat-line", ""], [4, "ngFor", "ngForOf"], ["mat-list-item", "", 3, "click", 4, "ngIf"], [2, "float", "right", "z-index", "1"], ["mat-mini-fab", "", "mat-dialog-close", "", 1, "buttonView"], [1, "matCardHeader"], [1, "mat-typography"], [1, "row"], [1, "col-md-4"], ["mat-list-icon", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "readonly", "", 3, "formControl"], [1, "col-md-12"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], ["class", "col-md-12", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right"], ["mat-button", "", "mat-dialog-close", ""], [1, "col-md-12", 2, "display", "flex", "justify-content", "center", "align-items", "center"], [1, "imagePedido", 3, "src"], ["matInput", "", "placeholder", "Detalle Pedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", 3, "formControl"], ["appearance", "outline", 1, "col-md-6", "mt-2"], [3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], [2, "margin-right", "5px"], ["mat-mini-fab", "", "class", "buttonSecundary", 3, "click", 4, "ngIf"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], ["class", "tarjetaSeguimiento  mt-2", 4, "ngIf"], ["Estados", ""], ["DetallePedido", ""], ["modalActualizarPedido", ""], ["modalReparto", ""], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], [3, "data"], [1, "tarjetaSeguimiento", "mt-2"], [1, "seguimiento"], [1, "tableFixHead"], ["role", "table", "id", "table", 1, "table"], [1, "text-center"], ["class", "text-center", "style", "width: 20%;", 4, "ngFor", "ngForOf"], ["id", "tableBodyActivos"], ["class", "columna text-center", "style", "width: 20%;", 4, "ngFor", "ngForOf"], [1, "text-center", 2, "width", "20%"], [1, "columna", "text-center", 2, "width", "20%"], ["class", "tarjeta col-md-12 mt-2", 4, "ngFor", "ngForOf"], [1, "tarjeta", "col-md-12", "mt-2"], [2, "float", "right", "z-index", "1", "margin-right", "5px"], ["mat-mini-fab", "", 1, "buttonView", 3, "click"], [2, "padding", "5px !important"], [2, "letter-spacing", "-0.025em !important", "line-height", "2rem !important", "font-weight", "600 !important", "text-align", "left"], [2, "letter-spacing", "-0.025em !important", "font-weight", "500 !important", "color", "rgba(100, 116, 139, 1)", "text-align", "justify", "overflow", "scroll", "max-height", "320px"], [2, "padding", "5px"], [1, "text-left", 2, "display", "flex", "align-items", "center", "font-size", "12px"], ["mat-list-item", "", 3, "click"], ["mat-line", ""], [4, "ngFor", "ngForOf"], ["mat-list-item", "", 3, "click", 4, "ngIf"], [2, "float", "right", "z-index", "1"], ["mat-mini-fab", "", "mat-dialog-close", "", 1, "buttonView"], [1, "matCardHeader"], [1, "mat-typography"], [1, "row"], [1, "col-md-4"], ["mat-list-icon", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "readonly", "", 3, "formControl"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], ["class", "col-md-12 mt-2", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right"], ["mat-button", "", "mat-dialog-close", ""], [1, "col-md-12", "mt-2", 2, "display", "flex", "justify-content", "center", "align-items", "center"], [1, "imagePedido", 3, "src"], ["matInput", "", "placeholder", "Detalle Pedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", 3, "formControl"], ["appearance", "outline", 1, "col-md-12", "mt-2"], [3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
         template: function SeguimientoPedidosComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -11238,20 +10369,20 @@
         _createClass(ListarPedidosFacadeService, [{
           key: "MostrarPedidos",
           value: function MostrarPedidos(params) {
-            var _this54 = this;
+            var _this52 = this;
 
             this.Cargando$.next(true);
             this.Pedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("pedido/pedido/usuario/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              _this54.Cargando$.next(false);
+              _this52.Cargando$.next(false);
 
-              _this54.Pedidos$.next(result.data.Table0);
+              _this52.Pedidos$.next(result.data.Table0);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
-              _this54.Cargando$.next(false);
+              _this52.Cargando$.next(false);
 
-              _this54.Pedidos$.next([]);
+              _this52.Pedidos$.next([]);
 
-              _this54._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
+              _this52._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al mostrar los pedidos', '');
 
               return rxjs__WEBPACK_IMPORTED_MODULE_1__["EMPTY"];
             }));

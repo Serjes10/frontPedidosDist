@@ -6605,7 +6605,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-clientes-clientes-module */
-            [__webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module~modules-seguri~2ef86244"), __webpack_require__.e("modules-clientes-clientes-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module~modules-seguri~2ef86244"), __webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module"), __webpack_require__.e("modules-clientes-clientes-module")]).then(__webpack_require__.bind(null,
             /*! ./modules/clientes/clientes.module */
             "1khV")).then(function (m) {
               return m.PedidosModule;
@@ -6616,7 +6616,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-administracion-administracion-module */
-            [__webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module~modules-seguri~2ef86244"), __webpack_require__.e("default~modules-administracion-administracion-module~modules-seguridad-seguridad-module"), __webpack_require__.e("modules-administracion-administracion-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module~modules-seguri~2ef86244"), __webpack_require__.e("default~modules-administracion-administracion-module~modules-seguridad-seguridad-module"), __webpack_require__.e("default~modules-administracion-administracion-module~modules-clientes-clientes-module"), __webpack_require__.e("modules-administracion-administracion-module")]).then(__webpack_require__.bind(null,
             /*! ./modules/administracion/administracion.module */
             "ifnQ")).then(function (m) {
               return m.AdministracionModule;
