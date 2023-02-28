@@ -6417,13 +6417,13 @@
         }
 
         if (rf & 2) {
-          var tipoPedido_r18 = ctx.$implicit;
+          var tipoPedido_r19 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", tipoPedido_r18.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", tipoPedido_r19.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tipoPedido_r18.TipoPedido);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tipoPedido_r19.TipoPedido);
         }
       }
 
@@ -6437,13 +6437,13 @@
         }
 
         if (rf & 2) {
-          var metodoPago_r19 = ctx.$implicit;
+          var metodoPago_r20 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", metodoPago_r19.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", metodoPago_r20.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](metodoPago_r19.MetodoPago);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](metodoPago_r20.MetodoPago);
         }
       }
 
@@ -6457,13 +6457,13 @@
         }
 
         if (rf & 2) {
-          var reparto_r20 = ctx.$implicit;
+          var reparto_r21 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reparto_r20.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reparto_r21.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](reparto_r20.NombreReparto);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](reparto_r21.NombreReparto);
         }
       }
 
@@ -6477,13 +6477,13 @@
         }
 
         if (rf & 2) {
-          var usuario_r21 = ctx.$implicit;
+          var usuario_r22 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", usuario_r21.Id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", usuario_r22.Id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](usuario_r21.Usuario);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](usuario_r22.Usuario);
         }
       }
 
@@ -6497,30 +6497,30 @@
         }
 
         if (rf & 2) {
-          var estado_r22 = ctx.$implicit;
+          var estado_r23 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", estado_r22.id);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", estado_r23.id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](estado_r22.EstadoProceso);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](estado_r23.EstadoProceso);
         }
       }
 
       function PedidosComponent_ng_template_31_div_54_Template(rf, ctx) {
         if (rf & 1) {
-          var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 60);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 62);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_div_54_Template_button_click_1_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25);
 
-            var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+            var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r23.descargarImagen();
+            return ctx_r24.descargarImagen();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-icon");
@@ -6539,9 +6539,9 @@
 
       function PedidosComponent_ng_template_31_div_55_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 63);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 63);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 64);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -6555,10 +6555,28 @@
         }
       }
 
+      function PedidosComponent_ng_template_31_button_59_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 62);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_button_59_Template_button_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27);
+
+            var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+            return ctx_r26.Guardar();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Guardar");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
       function PedidosComponent_ng_template_31_Template(rf, ctx) {
         if (rf & 1) {
-          var _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 40);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Pedidos ");
@@ -6735,19 +6753,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "button", 60);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](59, PedidosComponent_ng_template_31_button_59_Template, 2, 0, "button", 60);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_ng_template_31_Template_button_click_59_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r26);
-
-            var ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r25.Guardar();
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, "Guardar");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](60, "async");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6763,23 +6771,23 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 8, ctx_r4.pedidosFacade.responseTipoPedidos$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 9, ctx_r4.pedidosFacade.responseTipoPedidos$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](18, 10, ctx_r4.pedidosFacade.responseMetodosPago$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](18, 11, ctx_r4.pedidosFacade.responseMetodosPago$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](26, 12, ctx_r4.pedidosFacade.responseReparto$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](26, 13, ctx_r4.pedidosFacade.responseReparto$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](34, 14, ctx_r4.pedidosFacade.responseUsuario$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](34, 15, ctx_r4.pedidosFacade.responseUsuario$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](42, 16, ctx_r4.pedidosFacade.responseEstadoProceso$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](42, 17, ctx_r4.pedidosFacade.responseEstadoProceso$));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
 
@@ -6788,6 +6796,10 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r4.formPedido.get("url").value != null);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](60, 19, ctx_r4.pedidosFacade.responseCargando$));
         }
       }
 
@@ -6924,10 +6936,10 @@
         selectors: [["app-pedidos"]],
         decls: 33,
         vars: 16,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["role", "cell ", "data-title", "Tipo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Detalle", 1, "tdp", "text-justify"], ["role", "cell ", "data-title", "Observacion", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Nombre Reparto", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Usuario Ingreso ", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdTipoPedido", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "IdMetodoPago", "required", ""], ["formControlName", "IdReparto"], ["formControlName", "IdUsuario"], ["formControlName", "idEstado"], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "formControlName", "DetallePedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Observacion", "formControlName", "Observacion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off"], ["class", "col-md-12", 4, "ngIf"], ["class", "col-md-12", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right", "mt-2"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [3, "value"], [1, "col-md-12", 2, "display", "flex", "justify-content", "center", "align-items", "center"], [1, "imagePedido", 3, "src"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["role", "cell ", "data-title", "Tipo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Detalle", 1, "tdp", "text-justify"], ["role", "cell ", "data-title", "Observacion", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Nombre Reparto", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Usuario Ingreso ", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdTipoPedido", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "IdMetodoPago", "required", ""], ["formControlName", "IdReparto"], ["formControlName", "IdUsuario"], ["formControlName", "idEstado"], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Detalle Pedido", "formControlName", "DetallePedido", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Observacion", "formControlName", "Observacion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off"], ["class", "col-md-12", 4, "ngIf"], ["class", "col-md-12", "style", "display: flex; justify-content: center; align-items: center;", 4, "ngIf"], [1, "text-right", "mt-2"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["class", "button-principal", "mat-raised-button", "", 3, "click", 4, "ngIf"], [3, "value"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [1, "col-md-12", 2, "display", "flex", "justify-content", "center", "align-items", "center"], [1, "imagePedido", 3, "src"]],
         template: function PedidosComponent_Template(rf, ctx) {
           if (rf & 1) {
-            var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+            var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
@@ -6966,7 +6978,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PedidosComponent_Template_button_click_11_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r28);
 
               var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](32);
 
@@ -7033,7 +7045,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 61, 18, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, PedidosComponent_ng_template_31_Template, 61, 21, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
           }
 
           if (rf & 2) {
