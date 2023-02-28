@@ -1578,7 +1578,8 @@
         production: false,
         apiUrl: _config_json__WEBPACK_IMPORTED_MODULE_0__["dev"]['apiUrl'],
         apiUrlSecurity: _config_json__WEBPACK_IMPORTED_MODULE_0__["dev"]['apiUrl'],
-        wsUrl: 'http://3.15.90.29:5000/api/dev/',
+        wsUrl: 'http://3.15.90.29:5000',
+        //http://3.15.90.29:5000
         processEnv: 'dev',
         nombreEmpresa: "INVERSIONES AUGAJO S. DE R.L."
       };

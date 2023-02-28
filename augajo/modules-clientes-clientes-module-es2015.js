@@ -6018,11 +6018,11 @@ class SeguimientoPedidosComponent {
     verDetalle(template) {
         this.detallePedido.setValue(this.pedido.DetallePedido || '');
         this.observacion.setValue(this.pedido.Observacion || '');
+        this._bottomSheet.dismiss();
         let dialog = this.dialog.open(template, {
             width: "80%",
             panelClass: "app-full-bleed-dialog",
         });
-        this._bottomSheet.dismiss();
     }
     modalPedido() {
         this.detallePedido.setValue(this.pedido.DetallePedido || '');
