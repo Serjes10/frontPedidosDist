@@ -1441,6 +1441,70 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
 
 /***/ }),
 
+/***/ "UfMo":
+/*!***************************************************!*\
+  !*** ./src/app/core/guards/authorizated.guard.ts ***!
+  \***************************************************/
+/*! exports provided: AuthorizatedGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthorizatedGuard", function() { return AuthorizatedGuard; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/auth.service */ "lGQG");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
+
+
+
+
+class AuthorizatedGuard {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    canActivate(route, state) {
+        let estado = true;
+        // let menus:any[] = this.auth.obtenerMenus();
+        //Si no existen menus no permitir el acceso a la ruta ingresada
+        // if(menus.length === 0){
+        //   estado = false
+        // }else{
+        //   menus.forEach( m => {
+        //     for (const i in m.hijos) {
+        //       let url:string = m.hijos[i].url;
+        //       if(url.slice(0,1) != '/'){
+        //         url = `/${url}`;
+        //       }
+        //       // if(url.slice(1, 2))
+        //       if(url === state.url){
+        //         estado = true;
+        //       }
+        //     }
+        //   });
+        // }
+        if (localStorage.getItem("token") === null) {
+            estado = false;
+        }
+        //Si el estado es igual a falso se le cierra la sesion y se le redirigue al login
+        if (estado === false) {
+            this.auth.CerrarSesion();
+        }
+        return estado;
+    }
+}
+AuthorizatedGuard.ɵfac = function AuthorizatedGuard_Factory(t) { return new (t || AuthorizatedGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
+AuthorizatedGuard.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AuthorizatedGuard, factory: AuthorizatedGuard.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AuthorizatedGuard, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "V1yj":
 /*!*************************************************************!*\
   !*** ./src/app/utils/mensajesHttp/mensajes-http.service.ts ***!
@@ -2912,8 +2976,11 @@ class AuthService {
     CerrarSesion() {
         let site = localStorage.getItem("tipoLogueo");
         localStorage.clear();
-        localStorage.setItem("tipoLogueo", site);
-        this.router.navigateByUrl("login/" + `${site}`);
+        // if(site != null){
+        //   localStorage.setItem("tipoLogueo", site);
+        // }
+        this.router.navigateByUrl("inicio");
+        // this.router.navigateByUrl("login/" + `${site}`);
     }
     Login(params) {
         // localStorage.setItem("site", "1");
@@ -2928,7 +2995,6 @@ class AuthService {
             this.router.navigateByUrl('/dashboard');
             this.Cargando$.next(false);
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])((error) => {
-            console.log(error);
             this._toast.clearToasts();
             this._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al entrar al sistema', '');
             this.Cargando$.next(false);
@@ -3448,6 +3514,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_full_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout/full.component */ "ki4l");
 /* harmony import */ var _login_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/login/login.component */ "gEuR");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/home.component */ "9vUh");
+/* harmony import */ var _core_guards_authorizated_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/guards/authorizated.guard */ "UfMo");
+
 
 
 
@@ -3464,6 +3532,7 @@ const routes = [
     {
         path: '',
         component: _layout_full_component__WEBPACK_IMPORTED_MODULE_2__["FullComponent"],
+        canActivate: [_core_guards_authorizated_guard__WEBPACK_IMPORTED_MODULE_5__["AuthorizatedGuard"]],
         children: [
             {
                 path: 'dashboard',

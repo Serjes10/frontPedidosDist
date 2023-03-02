@@ -2427,7 +2427,7 @@
             return ctx_r15.Guardar();
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Cancelar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Guardar");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
