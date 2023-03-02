@@ -2363,6 +2363,8 @@
 
       function TipoUsuarioComponent_ng_template_31_Template(rf, ctx) {
         if (rf & 1) {
+          var _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 40);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Tipos de Usuario ");
@@ -2415,6 +2417,20 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 51);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TipoUsuarioComponent_ng_template_31_Template_button_click_17_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16);
+
+            var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r15.Guardar();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Cancelar");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -2447,18 +2463,18 @@
 
       function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_8_Template(rf, ctx) {
         if (rf & 1) {
-          var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 66);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 67);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_8_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27);
 
-            var hijo_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+            var hijo_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
 
-            var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4);
+            var ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4);
 
-            return ctx_r23.asignarMenu(hijo_r20.Id);
+            return ctx_r25.asignarMenu(hijo_r22.Id);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-icon");
@@ -2473,18 +2489,18 @@
 
       function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_9_Template(rf, ctx) {
         if (rf & 1) {
-          var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 67);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 68);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_9_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r28);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r30);
 
-            var hijo_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+            var hijo_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
 
-            var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4);
+            var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](4);
 
-            return ctx_r26.quitarMenu(hijo_r20.Id);
+            return ctx_r28.quitarMenu(hijo_r22.Id);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-icon");
@@ -2503,25 +2519,25 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "mat-divider");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 60);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 61);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 61);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 62);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 62);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 63);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 63);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 64);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_8_Template, 3, 0, "button", 64);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_8_Template, 3, 0, "button", 65);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_9_Template, 3, 0, "button", 65);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_button_9_Template, 3, 0, "button", 66);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2531,38 +2547,38 @@
         }
 
         if (rf & 2) {
-          var hijo_r20 = ctx.$implicit;
+          var hijo_r22 = ctx.$implicit;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", hijo_r20.Menu, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", hijo_r22.Menu, " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", hijo_r20.Descripcion, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", hijo_r22.Descripcion, " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !hijo_r20.asignado);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !hijo_r22.asignado);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", hijo_r20.asignado);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", hijo_r22.asignado);
         }
       }
 
       function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_Template(rf, ctx) {
         if (rf & 1) {
-          var _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-expansion-panel", 56);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-expansion-panel", 57);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_Template_mat_expansion_panel_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r32);
 
-            var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+            var ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
 
-            return ctx_r29.clickButton = false;
+            return ctx_r31.clickButton = false;
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-expansion-panel-header");
@@ -2575,60 +2591,60 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-panel-description");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 57);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 58);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "div", 58);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "div", 59);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_Template, 10, 4, "div", 59);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_div_8_Template, 10, 4, "div", 60);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var padre_r18 = ctx.$implicit;
+          var padre_r20 = ctx.$implicit;
 
-          var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+          var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r17.clickButton);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", padre_r18.Menu, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r19.clickButton);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", padre_r18.Descripcion, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", padre_r20.Menu, " ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", padre_r20.Descripcion, " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", padre_r18.hijos);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", padre_r20.hijos);
         }
       }
 
       function TipoUsuarioComponent_ng_template_33_mat_accordion_6_Template(rf, ctx) {
         if (rf & 1) {
-          var _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-accordion", 53);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-accordion", 54);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_Template, 9, 4, "mat-expansion-panel", 54);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, TipoUsuarioComponent_ng_template_33_mat_accordion_6_mat_expansion_panel_1_Template, 9, 4, "mat-expansion-panel", 55);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-paginator", 55);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-paginator", 56);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("page", function TipoUsuarioComponent_ng_template_33_mat_accordion_6_Template_mat_paginator_page_2_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r32);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r34);
 
-            var ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+            var ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r31.next($event);
+            return ctx_r33.next($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](3, "async");
@@ -2639,15 +2655,15 @@
         }
 
         if (rf & 2) {
-          var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r16.arrayMenusTipoUsuario);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r18.arrayMenusTipoUsuario);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("length", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](3, 3, ctx_r16.menuFacade.responseMenus$).length)("pageSize", ctx_r16.pageSize);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("length", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](3, 3, ctx_r18.menuFacade.responseMenus$).length)("pageSize", ctx_r18.pageSize);
         }
       }
 
@@ -2659,7 +2675,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-dialog-content", 51);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-dialog-content", 52);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, TipoUsuarioComponent_ng_template_33_div_3_Template, 2, 1, "div", 13);
 
@@ -2667,7 +2683,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, TipoUsuarioComponent_ng_template_33_mat_accordion_6_Template, 4, 5, "mat-accordion", 52);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, TipoUsuarioComponent_ng_template_33_mat_accordion_6_Template, 4, 5, "mat-accordion", 53);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](7, "async");
 
@@ -2914,10 +2930,10 @@
         selectors: [["app-tipo-usuario"]],
         decls: 35,
         vars: 16,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], ["modalTipoUsuarioMenu", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo usuario", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-left", "5px", 3, "click"], ["mat-mini-fab", "", 1, "buttonView", 2, "margin-left", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Tipo de Usuario", "formControlName", "TipoUsuario", "required", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Descripcion", "formControlName", "Descripcion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], [1, "mat-typography", 2, "height", "90%"], ["class", "example-headers-align", "multi", "", 4, "ngIf"], ["multi", "", 1, "example-headers-align"], ["class", "mat-expansion-panelPersonalizado", 3, "disabled", "click", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "page"], [1, "mat-expansion-panelPersonalizado", 3, "disabled", "click"], [2, "width", "60%"], [1, "text-right", 2, "width", "40%"], [4, "ngFor", "ngForOf"], [1, "contentAccordion", 2, "display", "flex", "align-items", "center", "padding-left", "24px", "padding-right", "24px", "padding-top", "5px", "padding-bottom", "5px"], [2, "width", "30%"], [2, "width", "50%"], [1, "text-right", 2, "width", "20%"], ["mat-mini-fab", "", "class", "buttonPrincipal", "style", "box-shadow: 0px;", 3, "click", 4, "ngIf"], ["mat-mini-fab", "", "class", "btnDelete", "style", "box-shadow: 0px;", 3, "click", 4, "ngIf"], ["mat-mini-fab", "", 1, "buttonPrincipal", 2, "box-shadow", "0px", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "box-shadow", "0px", 3, "click"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], ["modalTipoUsuarioMenu", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo usuario", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-left", "5px", 3, "click"], ["mat-mini-fab", "", 1, "buttonView", 2, "margin-left", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Tipo de Usuario", "formControlName", "TipoUsuario", "required", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Descripcion", "formControlName", "Descripcion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "buttonPrincipal", 2, "margin-right", "5px", 3, "click"], [1, "mat-typography", 2, "height", "90%"], ["class", "example-headers-align", "multi", "", 4, "ngIf"], ["multi", "", 1, "example-headers-align"], ["class", "mat-expansion-panelPersonalizado", 3, "disabled", "click", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "page"], [1, "mat-expansion-panelPersonalizado", 3, "disabled", "click"], [2, "width", "60%"], [1, "text-right", 2, "width", "40%"], [4, "ngFor", "ngForOf"], [1, "contentAccordion", 2, "display", "flex", "align-items", "center", "padding-left", "24px", "padding-right", "24px", "padding-top", "5px", "padding-bottom", "5px"], [2, "width", "30%"], [2, "width", "50%"], [1, "text-right", 2, "width", "20%"], ["mat-mini-fab", "", "class", "buttonPrincipal", "style", "box-shadow: 0px;", 3, "click", 4, "ngIf"], ["mat-mini-fab", "", "class", "btnDelete", "style", "box-shadow: 0px;", 3, "click", 4, "ngIf"], ["mat-mini-fab", "", 1, "buttonPrincipal", 2, "box-shadow", "0px", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "box-shadow", "0px", 3, "click"]],
         template: function TipoUsuarioComponent_Template(rf, ctx) {
           if (rf & 1) {
-            var _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+            var _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
@@ -2956,7 +2972,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TipoUsuarioComponent_Template_button_click_11_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r33);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r35);
 
               var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](32);
 
@@ -3023,7 +3039,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, TipoUsuarioComponent_ng_template_31_Template, 17, 1, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, TipoUsuarioComponent_ng_template_31_Template, 19, 1, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, TipoUsuarioComponent_ng_template_33_Template, 11, 6, "ng-template", null, 19, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
           }
@@ -4697,7 +4713,7 @@
         selectors: [["app-personas"]],
         decls: 33,
         vars: 16,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modalPersonas", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-right", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Primer Nombre", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Segundo Nombre", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Primer Apellido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Segundo Apellido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Identificaci\xF3n", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Identificaci\xF3n", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Genero", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Nacimiento", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6"], ["formControlName", "idTipoIdentificacion", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["matInput", "", "placeholder", "Identificaci\xF3n", "formControlName", "identificacion", "required", ""], ["appearance", "outline", 1, "col-md-4", "mt-2"], ["matInput", "", "placeholder", "Primer Nombre", "formControlName", "primerNombre", "required", ""], ["matInput", "", "placeholder", "Segundo Nombre", "formControlName", "segundoNombre"], ["matInput", "", "placeholder", "Primer Apellido", "formControlName", "primerApellido", "required", ""], ["matInput", "", "placeholder", "Segundo Apellido", "formControlName", "segundoApellido"], ["formControlName", "idGenero", "required", ""], ["matInput", "", "formControlName", "fechaNacimiento", "type", "date"], [1, "title"], [1, "row", "mt-2"], ["formControlName", "idDepartamento", "required", ""], ["formControlName", "idMunicipio", "required", ""], [4, "ngFor", "ngForOf"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["matInput", "", "placeholder", "Primer Nombre", "formControlName", "ciudad", "required", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Direcci\xF3n", "formControlName", "direccion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [3, "value"], [3, "value", 4, "ngIf"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modalPersonas", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-right", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Pedido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Primer Nombre", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Segundo Nombre", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Primer Apellido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Segundo Apellido", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Identificaci\xF3n", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Identificaci\xF3n", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Genero", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Nacimiento", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6"], ["formControlName", "idTipoIdentificacion", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["matInput", "", "placeholder", "Identificaci\xF3n", "formControlName", "identificacion", "required", ""], ["appearance", "outline", 1, "col-md-4", "mt-2"], ["matInput", "", "placeholder", "Primer Nombre", "formControlName", "primerNombre", "required", ""], ["matInput", "", "placeholder", "Segundo Nombre", "formControlName", "segundoNombre"], ["matInput", "", "placeholder", "Primer Apellido", "formControlName", "primerApellido", "required", ""], ["matInput", "", "placeholder", "Segundo Apellido", "formControlName", "segundoApellido"], ["formControlName", "idGenero", "required", ""], ["matInput", "", "formControlName", "fechaNacimiento", "type", "date"], [1, "title"], [1, "row", "mt-2"], ["formControlName", "idDepartamento", "required", ""], ["formControlName", "idMunicipio", "required", ""], [4, "ngFor", "ngForOf"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["matInput", "", "placeholder", "Ciudad", "formControlName", "ciudad", "required", ""], [1, "col-md-12", "mt-2"], ["appearance", "outline", 1, "example-full-width"], ["matInput", "", "placeholder", "Direcci\xF3n", "formControlName", "direccion", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "10", "autocomplete", "off", "required", ""], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [3, "value"], [3, "value", 4, "ngIf"]],
         template: function PersonasComponent_Template(rf, ctx) {
           if (rf & 1) {
             var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -6508,7 +6524,7 @@
 
       function UsuariosComponent_ng_template_31_mat_option_9_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 52);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 55);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6528,7 +6544,7 @@
 
       function UsuariosComponent_ng_template_31_mat_option_17_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 52);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 55);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6610,7 +6626,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-form-field", 42);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-form-field", 46);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "mat-label");
 
@@ -6618,7 +6634,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "input", 46);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "input", 47);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6630,9 +6646,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "input", 47);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "input", 48);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 48);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 49);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UsuariosComponent_ng_template_31_Template_button_click_29_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r17);
@@ -6652,29 +6668,51 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 50);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "button", 51);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 49);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "button", 50);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Cancelar");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "button", 51);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UsuariosComponent_ng_template_31_Template_button_click_35_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UsuariosComponent_ng_template_31_Template_button_click_33_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r17);
 
             var ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r18.Guardar();
+            return ctx_r18.generarPassRandom();
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Guardar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "mat-icon");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " autorenew ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 52);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "button", 53);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Cancelar");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "button", 54);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UsuariosComponent_ng_template_31_Template_button_click_39_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r17);
+
+            var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r19.Guardar();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Guardar");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6818,6 +6856,12 @@
 
             this.pageIndex = event.pageIndex;
           }
+        }, {
+          key: "generarPassRandom",
+          value: function generarPassRandom() {
+            var randomstring = Math.random().toString(36).slice(-12);
+            this.formUsuario.get('Password').setValue(randomstring);
+          }
         }]);
 
         return UsuariosComponent;
@@ -6832,10 +6876,10 @@
         selectors: [["app-usuarios"]],
         decls: 33,
         vars: 16,
-        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo usuario", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-right", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdPersona", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "TipoUsuario", "required", ""], ["matInput", "", "placeholder", "Usuario", "formControlName", "Usuario", "required", ""], ["matInput", "", "placeholder", "Password", "formControlName", "Password", "autocomplete", "off", 3, "type"], ["type", "button", "mat-icon-button", "", "matSuffix", "", 3, "click"], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [3, "value"]],
+        consts: [[1, "navigation"], ["aria-label", "breadcrumb"], [1, "breadcrumb", 2, "background-color", "white !important"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "content"], [1, "titleNav"], [2, "font-size", "2rem", "font-weight", "800", "letter-spacing", "-.025em!important", "line-height", "2.5rem!important", "text-overflow", "ellipsis!important"], [1, "text-right", "action"], ["mat-mini-fab", "", 1, "button-principal", 2, "margin-right", "5px", 3, "click"], ["appearance", "outline", 2, "width", "100%"], ["matInput", "", "type", "text", "placeholder", "Buscar", "autocomplete", "off", 3, "formControl"], ["matPrefix", ""], [4, "ngIf"], [1, "col-md-12"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], ["class", "alert alert-primary text-center mt-4", "role", "alert", "style", "width: 50%;", 4, "ngIf"], ["class", "matCardPersonalizada mt-2", 4, "ngIf"], ["modal", ""], [3, "data"], ["role", "alert", 1, "alert", "alert-primary", "text-center", "mt-4", 2, "width", "50%"], [1, "matCardPersonalizada", "mt-2"], ["role", "table", 1, "table", "bordeTabla", "tablep"], [1, "theadp"], [1, "trp", "bg-success", "text-center"], ["scope", "col ", "role", "columnheader ", 1, "thp", "text-center"], ["role", "rowgroup ", 1, "tbodyp"], ["class", "text-center trp ", "role", "row ", 4, "ngFor", "ngForOf"], ["tourAnchor", " pagination ", 3, "length", "pageSize", "page"], ["role", "row ", 1, "text-center", "trp"], ["role", "cell ", "data-title", "Codigo usuario", 1, "tdp", "text-center"], ["mat-mini-fab", "", 1, "buttonSecundary", 3, "click"], ["mat-mini-fab", "", 1, "btnDelete", 2, "margin-right", "5px", 3, "click"], ["role", "cell ", "data-title", "Codigo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Tipo Usuario", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Metodo de Pago", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Fecha Ingreso", 1, "tdp", "text-center"], ["role", "cell ", "data-title", "Estado", 1, "tdp", "text-center"], [1, "matCardHeader"], [1, "mat-typography"], [3, "formGroup"], [1, "row"], ["appearance", "outline", 1, "col-md-6", "mt-2"], ["formControlName", "IdPersona", "required", ""], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "TipoUsuario", "required", ""], ["appearance", "outline", 1, "col-md-12", "mt-2"], ["matInput", "", "placeholder", "Usuario", "formControlName", "Usuario", "required", ""], ["matInput", "", "placeholder", "Password", "formControlName", "Password", "autocomplete", "off", 3, "type"], ["type", "button", "mat-icon-button", "", "matSuffix", "", 3, "click"], [1, "mt-2", "col-md-1", "text-left"], ["type", "button", "mat-mini-fab", "", 3, "click"], [1, "text-right"], ["mat-raised-button", "", "mat-dialog-close", "", 2, "margin-right", "5px"], ["mat-raised-button", "", 1, "button-principal", 3, "click"], [3, "value"]],
         template: function UsuariosComponent_Template(rf, ctx) {
           if (rf & 1) {
-            var _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+            var _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
@@ -6874,7 +6918,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UsuariosComponent_Template_button_click_11_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r19);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20);
 
               var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](32);
 
@@ -6941,7 +6985,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, UsuariosComponent_ng_template_31_Template, 37, 11, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, UsuariosComponent_ng_template_31_Template, 41, 11, "ng-template", null, 18, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
           }
 
           if (rf & 2) {
