@@ -3974,13 +3974,10 @@
             var _this27 = this;
 
             this.Cargando$.next(true);
-            this.Pedidos$.next([]);
             var request$ = this.dataApi.PutDataApi("pedido/pedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
               respuesta(result);
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(function (error) {
               _this27.Cargando$.next(false);
-
-              _this27.Pedidos$.next([]);
 
               _this27._mensajesHttp.mostrarErrorHttp(error, 'Ocurrio un error al actualizar el pedido', '');
 
@@ -4016,8 +4013,6 @@
             this.Cargando$.next(true);
             this.TipoPedidos$.next([]);
             var request$ = this.dataApi.GetDataApi("mantenimiento/tipoPedido/", params).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (result) {
-              console.log(result);
-
               _this29.Cargando$.next(false);
 
               _this29.TipoPedidos$.next(result.data.Table0);
@@ -6301,7 +6296,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](13, 9, pedido_r6.DetallePedido, 100), " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](13, 10, pedido_r6.DetallePedido, 100), " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -6313,11 +6308,11 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pedido_r6.Usuario);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", pedido_r6.PrimerNombre, " ", pedido_r6.PrimerApellido, "");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](22, 12, pedido_r6.FechaInsercion, "yyyy-MM-dd"), "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](22, 13, pedido_r6.FechaInsercion, "yyyy-MM-dd"), "");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -6407,7 +6402,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "tbody", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, PedidosComponent_mat_card_28_tr_26_Template, 25, 15, "tr", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, PedidosComponent_mat_card_28_tr_26_Template, 25, 16, "tr", 27);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](27, "slice");
 
