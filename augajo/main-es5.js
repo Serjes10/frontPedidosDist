@@ -673,11 +673,11 @@
       !*** ./config.json ***!
       \*********************/
 
-    /*! exports provided: dev, default */
+    /*! exports provided: dev, local, default */
 
     /***/
     function W9(module) {
-      module.exports = JSON.parse("{\"dev\":{\"apiUrl\":\"http://3.15.90.29:5000/api/dev/\",\"apiUrlSecurity\":\"http://3.15.90.29:5000/api/dev/\"}}");
+      module.exports = JSON.parse("{\"dev\":{\"apiUrl\":\"http://3.15.90.29:5000/api/dev/\",\"apiUrlSecurity\":\"http://3.15.90.29:5000/api/dev/\",\"wsUrl\":\"http://3.15.90.29:5000\"},\"local\":{\"apiUrl\":\"http://localhost:5000/api/dev/\",\"apiUrlSecurity\":\"http://localhost:5000/api/dev/\",\"wsUrl\":\"http://localhost:5000\"}}");
       /***/
     },
 
@@ -1556,9 +1556,9 @@
 
       var environment = {
         production: false,
-        apiUrl: _config_json__WEBPACK_IMPORTED_MODULE_0__["dev"]['apiUrl'],
-        apiUrlSecurity: _config_json__WEBPACK_IMPORTED_MODULE_0__["dev"]['apiUrl'],
-        wsUrl: 'http://3.15.90.29:5000',
+        apiUrl: _config_json__WEBPACK_IMPORTED_MODULE_0__["local"]['apiUrl'],
+        apiUrlSecurity: _config_json__WEBPACK_IMPORTED_MODULE_0__["local"]['apiUrl'],
+        wsUrl: 'http://localhost:5000',
         //http://3.15.90.29:5000
         processEnv: 'dev',
         nombreEmpresa: "INVERSIONES AUGAJO S. DE R.L."
