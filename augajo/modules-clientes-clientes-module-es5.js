@@ -6811,6 +6811,7 @@
             var _this35 = this;
 
             this.socket.on('connect', function () {
+              console.log('c');
               _this35.socketStatus = true;
             });
             this.socket.on('disconnect', function () {

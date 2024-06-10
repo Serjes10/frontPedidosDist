@@ -4391,6 +4391,7 @@ class ClientSocketService {
     }
     checkStatus() {
         this.socket.on('connect', () => {
+            console.log('c');
             this.socketStatus = true;
         });
         this.socket.on('disconnect', () => {

@@ -677,7 +677,7 @@
 
     /***/
     function W9(module) {
-      module.exports = JSON.parse("{\"dev\":{\"apiUrl\":\"http://18.117.207.99:5000/api/dev/\",\"apiUrlSecurity\":\"http://18.117.207.99:5000/api/dev/\",\"wsUrl\":\"http://18.117.207.99:5000\"},\"local\":{\"apiUrl\":\"http://localhost:5000/api/dev/\",\"apiUrlSecurity\":\"http://localhost:5000/api/dev/\",\"wsUrl\":\"http://localhost:5000\"}}");
+      module.exports = JSON.parse("{\"dev\":{\"apiUrl\":\"http://augajoapp.com:5000/api/dev/\",\"apiUrlSecurity\":\"http://augajoapp.com:5000/api/dev/\",\"wsUrl\":\"http://augajoapp.com:5000\"},\"local\":{\"apiUrl\":\"http://localhost:5000/api/dev/\",\"apiUrlSecurity\":\"http://localhost:5000/api/dev/\",\"wsUrl\":\"http://localhost:5000\"}}");
       /***/
     },
 
