@@ -1,145 +1,107 @@
+//assets/style/style.scss
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-// Plus imports for other components in your app.
+@use '@angular/material' as mat;
+@use 'variable' as *;
+@use 'spinner' as *;
+@use 'app' as *;
+@use 'header' as *;
+@use 'pages' as *;
+@use 'sidebar' as *;
+@use 'responsive' as *;
+// @use "fixed-plugin" as *;   // eliminar si borras fixed.scss
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
+/* ===============================
+   VARIABLES DE MARCA AUGAJO
+================================ */
+:root {
+  --color-primary: #1A1A1A;
+  --color-accent: #E01A1A;
+  --color-accent-pure: #FE0000;
+  --color-accent-hover: #C41515;
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$material-primary: mat-palette($mat-indigo);
-$material-accent: mat-palette($mat-pink, A200, A100, A400);
+  --color-bg: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #6E6E6E;
+  --color-text-muted: #9A9A9A;
+  --color-border: #ECEAE6;
 
-// The warn palette is optional (defaults to red).
-$material-warn: mat-palette($mat-red);
+  --color-sidebar: #161616;
+  --color-sidebar-text: #B8B5B0;
+  --color-sidebar-muted: #5F5C58;
 
-// Create the theme object (a Sass map containing all of the palettes).
-$material-theme: mat-light-theme($material-primary, $material-accent, $material-warn);
+  --color-success: #2E7D5B;
+  --color-warning: #E0A82E;
+  --color-error: #C0281F;
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($material-theme);
+  --radius-card: 14px;
+  --radius-btn: 9px;
+  --shadow-soft: 0 1px 3px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.05);
+  --shadow-hover: 0 2px 6px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.09);
 
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
-/**
- * Table Of Content
- *
- * 	1. Globals
- *	2. Headers
- *	3. Navigations
- *	4. Banners
- *	5. Footers
- *	6. app
- *	7. Widgets
- *	8. Custom Templates
- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 16px;
+  --sp-4: 24px; --sp-5: 32px; --sp-6: 48px;
 
-@import 'variable';
-@import "fixed-plugin";
-@import 'spinner';
-@import 'app';
-@import 'header';
-@import 'pages';
-@import 'sidebar';
-@import 'responsive';
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
 
-@import "../styles/icons/material-design-iconic-font/css/materialdesignicons.min.css";
+/* ===============================
+   TIPOGRAFÍA
+================================ */
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* ===============================
+   CARDS (MDC)
+================================ */
+.mat-mdc-card {
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-soft) !important;
+  background-color: var(--color-surface) !important;
+  transition: box-shadow .2s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-hover) !important;
+  }
+}
+
+/* ===============================
+   MENÚS Y PANELES (MDC)
+================================ */
+.mat-mdc-menu-surface {
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* ===============================
+   TABS (MDC) — indicador rojo Augajo
+================================ */
+.mat-mdc-tab .mdc-tab__text-label {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: var(--color-text) !important;
+}
+.mat-mdc-tab-indicator .mdc-tab-indicator__content--underline {
+  border-color: var(--color-accent) !important;
+}
+
+/* ===============================
+   IMPRESIÓN
+================================ */
+app-formato-cotizacion {
+  display: none;
+}
+
 @media print {
-    app-root > * { display: none; }
-    app-root app-formato-cotizacion { display: block; }
-  }
-
-
-  app-formato-cotizacion {
-    /* hide the printing component from @media screen */
-    display: none;
-  }
-  
-  @media print {
-    /* invert the display (show/hide) properties of the main */
-    /* aplication component and the printing component       */
-  
-    app-formato-cotizacion {
-      display: block;
-    }
-  
-    app-main-page {
-      display: none;
-    }
-  }
-/*--------------------------------------------------------------
-# Variables, functions and mixins
---------------------------------------------------------------*/
-@import "abstracts/variables",
-        "abstracts/functions",
-        "abstracts/mixins",
-        'abstracts/include-media';
-
-/*--------------------------------------------------------------
-1.0 Normalize
-	* normalize.css v7.0.0 | MIT License
-	* github.com/necolas/normalize.css
---------------------------------------------------------------*/
-@import "normalize";
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
-
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "components/forms";
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-@import "components/buttons";
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-@import "layout/header";
-
-/*--------------------------------------------------------------
-# Hero
---------------------------------------------------------------*/
-@import "layout/hero";
-
-/*--------------------------------------------------------------
-# Features
---------------------------------------------------------------*/
-@import "layout/features";
-
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-@import "layout/testimonials";
-
-/*--------------------------------------------------------------
-# Newsletter
---------------------------------------------------------------*/
-@import "layout/newsletter";
-
-/*--------------------------------------------------------------
-# Site content
---------------------------------------------------------------*/
-@import "layout/main";
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-@import "layout/footer";
+  app-root > * { display: none; }
+  app-root app-formato-cotizacion { display: block; }
+  app-formato-cotizacion { display: block; }
+  app-main-page { display: none; }
+}

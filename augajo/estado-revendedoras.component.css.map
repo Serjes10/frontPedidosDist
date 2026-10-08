@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/modules/Consignacion/estado-revendedoras/estado-revendedoras.component.scss"],
+  "sourcesContent": ["\r\n.detalle-resumen {\r\n  display: flex;\r\n  gap: 32px;\r\n  flex-wrap: wrap;\r\n  padding: 4px 2px 18px;\r\n  margin-bottom: 8px;\r\n  border-bottom: 1px solid var(--color-border);\r\n}\r\n\r\n.resumen-item {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 3px;\r\n\r\n  .resumen-lbl {\r\n    font-size: 11px;\r\n    font-weight: 600;\r\n    text-transform: uppercase;\r\n    letter-spacing: .05em;\r\n    color: var(--color-text-secondary);\r\n  }\r\n\r\n  .resumen-val {\r\n    font-family: var(--font-serif);\r\n    font-size: 20px;\r\n    font-weight: 700;\r\n    color: var(--color-text);\r\n  }\r\n}"],
+  "mappings": ";AACA,CAAA;AACE,WAAA;AACA,OAAA;AACA,aAAA;AACA,WAAA,IAAA,IAAA;AACA,iBAAA;AACA,iBAAA,IAAA,MAAA,IAAA;;AAGF,CAAA;AACE,WAAA;AACA,kBAAA;AACA,OAAA;;AAEA,CALF,aAKE,CAAA;AACE,aAAA;AACA,eAAA;AACA,kBAAA;AACA,kBAAA;AACA,SAAA,IAAA;;AAGF,CAbF,aAaE,CAAA;AACE,eAAA,IAAA;AACA,aAAA;AACA,eAAA;AACA,SAAA,IAAA;;",
+  "names": []
+}

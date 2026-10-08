@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/actions-button/actions-button.component.css"],
+  "sourcesContent": ["\r\n.button .mat-icon-button{\r\n    width: 10%;\r\n}\r\n\r\n.mat-icon-button{\r\n    height: 0px;\r\n}\r\n\r\n.icon{\r\n    font-size: 1vw;\r\n}\r\n\r\n.textButton{\r\n    font-size: calc(0.5em + 0.5vw);\r\n}"],
+  "mappings": ";AACA,CAAC,OAAO,CAAC;AACL,SAAO;AACX;AAEA,CAJS;AAKL,UAAQ;AACZ;AAEA,CAAC;AACG,aAAW;AACf;AAEA,CAAC;AACG,aAAW,KAAK,MAAM,EAAE;AAC5B;",
+  "names": []
+}

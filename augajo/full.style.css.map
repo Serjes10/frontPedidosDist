@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/full.style.scss"],
+  "sourcesContent": [".colorBack {\r\n  background: var(--color-surface) !important;\r\n  color: var(--color-text) !important;\r\n  border-bottom: 1px solid var(--color-border);\r\n  box-shadow: none !important;\r\n}\r\n\r\n.topbar {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 12px;\r\n  min-height: 60px;\r\n  padding: 0 16px;\r\n}\r\n\r\n/* espaciador que empuja las acciones a la derecha (reemplaza el fxFlex muerto) */\r\n.topbar-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n/* botón hamburguesa — discreto */\r\n.snav {\r\n  background: transparent !important;\r\n  color: var(--color-text) !important;\r\n  box-shadow: none !important;\r\n  border: none !important;\r\n  flex-shrink: 0;\r\n\r\n  &:hover {\r\n    background: #F4F2EF !important;\r\n  }\r\n}\r\n\r\n/* logo en móvil */\r\n.navbar-header {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.imgLogoPrincipal {\r\n  max-height: 34px;\r\n  width: auto;\r\n}\r\n\r\n.floatRight {\r\n  flex-shrink: 0;\r\n}"],
+  "mappings": ";;;AAAA,CAAA;AACE,cAAA,IAAA;AACA,SAAA,IAAA;AACA,iBAAA,IAAA,MAAA,IAAA;AACA,cAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;AACA,cAAA;AACA,WAAA,EAAA;;AAIF,CAAA;AACE,QAAA,EAAA,EAAA;;AAIF,CAAA;AACE,cAAA;AACA,SAAA,IAAA;AACA,cAAA;AACA,UAAA;AACA,eAAA;;AAEA,CAPF,IAOE;AACE,cAAA;;AAKJ,CAAA;AACE,WAAA;AACA,eAAA;;AAGF,CAAA;AACE,cAAA;AACA,SAAA;;AAGF,CAAA;AACE,eAAA;;",
+  "names": []
+}

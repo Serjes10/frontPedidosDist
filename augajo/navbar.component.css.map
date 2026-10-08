@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/navbar/navbar.component.scss"],
+  "sourcesContent": ["\r\n.button-perfil {\r\n  background: var(--color-accent) !important;\r\n  color: #fff !important;\r\n  box-shadow: none !important;\r\n  transition: background .16s ease;\r\n\r\n  &:hover {\r\n    background: var(--color-accent-hover) !important;\r\n  }\r\n}\r\n\r\n.exit {\r\n  color: var(--color-error);\r\n\r\n  mat-icon {\r\n    color: var(--color-error);\r\n    margin-right: 4px;\r\n  }\r\n}\r\n\r\n"],
+  "mappings": ";AACA,CAAA;AACE,cAAA,IAAA;AACA,SAAA;AACA,cAAA;AACA,cAAA,WAAA,MAAA;;AAEA,CANF,aAME;AACE,cAAA,IAAA;;AAIJ,CAAA;AACE,SAAA,IAAA;;AAEA,CAHF,KAGE;AACE,SAAA,IAAA;AACA,gBAAA;;",
+  "names": []
+}

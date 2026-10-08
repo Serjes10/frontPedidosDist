@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/paginator/paginator.component.css"],
+  "sourcesContent": [".example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n.paginator{\r\n  background-color: #f4f4f4 !important;\r\n\r\n}\r\n.paginator span{\r\n  color: rgba(0, 0, 0, 0.54) !important;\r\n  font-family: Poppins, sans-serif;\r\n  font-size: 12px;\r\n  margin-left: 1%;\r\n}"],
+  "mappings": ";AAAA,CAAC;AACC,QAAM,EAAE,EAAE;AACZ;AACA,CAAC;AACC,oBAAkB;AAEpB;AACA,CAJC,UAIU;AACT,SAAO,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE;AACrB,eAAa,OAAO,EAAE;AACtB,aAAW;AACX,eAAa;AACf;",
+  "names": []
+}

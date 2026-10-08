@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/scroll-top/scroll-top.component.css"],
+  "sourcesContent": ["p {\r\n    font-family: Lato;\r\n}\r\n\r\na {\r\n    position: fixed;\r\n    z-index: 999;\r\n    right: 0.75rem;\r\n    bottom: 0.75rem;\r\n    width: 2.625rem;\r\n    height: 2.625rem;\r\n    border-radius: 1.875rem;\r\n    background-size: 1.125rem 1.125rem;\r\n    text-indent: -9999px;\r\n    outline: none;\r\n}"],
+  "mappings": ";AAAA;AACI,eAAa;AACjB;AAEA;AACI,YAAU;AACV,WAAS;AACT,SAAO;AACP,UAAQ;AACR,SAAO;AACP,UAAQ;AACR,iBAAe;AACf,mBAAiB,SAAS;AAC1B,eAAa;AACb,WAAS;AACb;",
+  "names": []
+}

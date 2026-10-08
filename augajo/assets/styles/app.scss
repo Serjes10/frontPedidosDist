@@ -1,3 +1,5 @@
+//assets/style/app.scss.scss
+@use 'variable' as *;
 
 
 * {
@@ -26,7 +28,7 @@ a.link{
     color:$headingtext;
     text-decoration: none;
     &:hover, &:focus{
-        color:$themecolor;
+        color:#3f51b5;
     }
 }
 .img-responsive{
@@ -676,7 +678,7 @@ froms
     line-height: 25px;
     padding: 10px;
     width: 100%;
-    font-size:$font-16;
+    font-size: 16px;
 }
 .mat-form-field-underline{
     background-color: rgba(0, 0, 0, 0.25);
@@ -739,7 +741,7 @@ Mat card
 Grid
 *******************/
 .row{
-    margin: 0 -10px;
+    margin: 0 0px !important;
 }
 /*******************
 Table
