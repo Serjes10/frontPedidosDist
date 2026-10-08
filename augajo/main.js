@@ -1,7 +1,7 @@
 import {
   provideCharts,
   withDefaultRegisterables
-} from "./chunk-QLBZQUFG.js";
+} from "./chunk-MWZIR6R7.js";
 import {
   MatAccordion,
   MatExpansionModule,
@@ -9,23 +9,23 @@ import {
   MatExpansionPanelContent,
   MatExpansionPanelHeader,
   MatExpansionPanelTitle
-} from "./chunk-KLR2CWWB.js";
+} from "./chunk-IQPFELPT.js";
 import {
   SocketIoModule
-} from "./chunk-VQ5LQHAU.js";
+} from "./chunk-JA475XP5.js";
 import {
   MatDivider,
   MatListItem,
   MatListModule,
   MatNavList
-} from "./chunk-KOLAMMRU.js";
+} from "./chunk-E22IH4LW.js";
 import {
   DateAdapter,
   MAT_DATE_FORMATS,
   MAT_DATE_LOCALE,
   MatDatepickerModule
-} from "./chunk-F7KNSRT7.js";
-import "./chunk-JCK2223L.js";
+} from "./chunk-NKLY475V.js";
+import "./chunk-3EPCOCV5.js";
 import {
   DefaultValueAccessor,
   FormControl,
@@ -46,7 +46,7 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-7MJ2GRQY.js";
+} from "./chunk-T66DRYI4.js";
 import {
   ActivatedRoute,
   ApplicationRef,
@@ -225,7 +225,7 @@ import {
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
   ɵɵviewQuery
-} from "./chunk-SQPJPWK2.js";
+} from "./chunk-V7X2DIQ7.js";
 
 // node_modules/lodash/lodash.js
 var require_lodash = __commonJS({
@@ -9229,27 +9229,27 @@ var routes = [
     children: [
       {
         path: "dashboard",
-        loadChildren: () => import("./dashboard.module-PHWYTVTQ.js").then((m) => m.DashboardModule)
+        loadChildren: () => import("./dashboard.module-HFYTEQZA.js").then((m) => m.DashboardModule)
       },
       {
         path: "seguridad",
-        loadChildren: () => import("./seguridad.module-6I7TXREH.js").then((m) => m.SeguridadModule)
+        loadChildren: () => import("./seguridad.module-HNIEYXIG.js").then((m) => m.SeguridadModule)
       },
       {
         path: "cliente",
-        loadChildren: () => import("./clientes.module-KJHLW5ZW.js").then((m) => m.PedidosModule)
+        loadChildren: () => import("./clientes.module-VXKDBRF7.js").then((m) => m.PedidosModule)
       },
       {
         path: "administracion",
-        loadChildren: () => import("./administracion.module-XI4ASFSR.js").then((m) => m.AdministracionModule)
+        loadChildren: () => import("./administracion.module-GKXKN3J5.js").then((m) => m.AdministracionModule)
       },
       {
         path: "inventario",
-        loadChildren: () => import("./inventario.module-6MLVOBTY.js").then((m) => m.InventarioModule)
+        loadChildren: () => import("./inventario.module-PD65ZUDN.js").then((m) => m.InventarioModule)
       },
       {
         path: "consignacion",
-        loadChildren: () => import("./compensacion.module-XNTKVTBT.js").then((m) => m.ConsignacionModule)
+        loadChildren: () => import("./compensacion.module-GZLNEBLT.js").then((m) => m.ConsignacionModule)
       }
     ]
   },
